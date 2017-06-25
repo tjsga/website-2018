@@ -39,7 +39,7 @@ html,body,div,span,button,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pr
 header {
     position: relative;
     width: 100vw;
-    height: calc(10vh + 50px);
+    /*height: calc(10vh + 50px);*/
 }
 
 #banner {
@@ -187,12 +187,11 @@ footer {
     min-height: 100vh;
     z-index: 1;
     background-color: #616161;
-    /*background-image: url('../images/bg3-min.jpg');
+    background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
-    */
 }
 
 /*#wrapper:before {
@@ -303,10 +302,9 @@ button.menu-item:active {
 }
 
 #desc {
-    position: absolute;
-    top: 30vh;
+    position: relative;
     width: 100vw;
-    min-height: 60vh; /*calc(10.6em + 50px);*/
+    min-height: 100%; /*calc(10.6em + 50px);*/
     text-align: center;
     vertical-align: middle;
     color: #000;
@@ -316,8 +314,6 @@ button.menu-item:active {
 
 @media screen and (max-width: 900px) {
     #desc {
-        top: 10vh;
-        height: 80vh;
     }
 }
 
