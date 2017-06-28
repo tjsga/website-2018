@@ -84,7 +84,7 @@ nav#menu {
     min-height: 280px;
     width: 100vw;
     color: #000;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 28px 79px 0 rgba(66,129,121,.27);
 }
 
@@ -96,10 +96,11 @@ nav#menu {
     top: 0vh;
     content: '';
     display: block;
+    background-color: #010318;
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position-x: center;
-    background-position-y: -10vh;
+    background-position-y: 7.5vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: -2;
@@ -255,24 +256,25 @@ section {
     height: 100vh;
 }
 
-#desc > h1 {
+#intro > h1 {
     font-size: 3.5em;
     margin-top: 0.5em;
 }
 
-#desc > h2 {
+#intro > h2 {
     width: calc(100% - 1em);
     font-size: 1.2em;
     padding: 0.5em 0;
     display: inline-block;
 }
 
-#desc > span {
+#intro > span, #intro > p {
     width: calc(100% - 1em);
     padding: 0 0.5em;
     font-size: 1.2em;
     display: inline-block;
     margin: 0.5em 0;
+    color: #fff;
     clear: both;
 }
 
