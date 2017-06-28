@@ -64,6 +64,47 @@ nav#menu {
     flex-wrap: nowrap;
 }
 
+#dome:before {
+    position: absolute;
+    height: 40vh;
+    min-height: 280px;
+    width: 100vw;
+    top: 0vh;
+    content: '';
+    display: block;
+    background-color:  rgba(255, 255, 255, 0.1);
+    -webkit-filter: blur(10px);
+    filter        : blur(10px); 
+    z-index: -1;
+}
+
+#dome {
+    position: relative;
+    height: 40vh;
+    min-height: 280px;
+    width: 100vw;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 28px 79px 0 rgba(66,129,121,.27);
+}
+
+#dome:after {
+    position: absolute;
+    height: 40vh;
+    min-height: 280px;
+    width: 100vw;
+    top: 0vh;
+    content: '';
+    display: block;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -10vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -2;
+}
+
 a {
     color: #1976D2;
     text-decoration: none;
@@ -187,27 +228,26 @@ footer {
     min-height: 100vh;
     z-index: 1;
     background-color: #616161;
+    /*background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    */
+}
+
+/*#wrapper:before {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    content: '';
+    display: block;
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
-}
-
-/*#wrapper:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: '';
-    display: block;
-    background-image: url('../images/bg3-min.jpg');
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    z-index: -1;
 }*/
 
 section {
@@ -307,9 +347,6 @@ button.menu-item:active {
     min-height: 100%; /*calc(10.6em + 50px);*/
     text-align: center;
     vertical-align: middle;
-    color: #000;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 28px 79px 0 rgba(66,129,121,.27);
 }
 
 @media screen and (max-width: 900px) {
