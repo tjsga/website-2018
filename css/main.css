@@ -20,6 +20,18 @@ html,body,div,span,button,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pr
     border: 0
 }
 
+html {
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden; /*IMPORTANT TO CHANGE IF EXPANDING*/
+    width: 100%;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none
+}
+
 .fluid {
     -webkit-transition: all .2s ease;
     -moz-transition: all .2s ease;
@@ -38,12 +50,13 @@ html,body,div,span,button,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pr
 
 header {
     position: relative;
-    width: 100vw;
+    width: 100%;
+    
     /*height: calc(10vh + 50px);*/
 }
 
 #banner {
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     text-align: center;
     display: table;
@@ -52,23 +65,24 @@ header {
 #banner h1 {
     display: table-cell;
     vertical-align: middle;
-    font-size: 4vw;
+    font-size: 200%;
     font-weight: bold;
 }
 
 nav#menu {
-    width: 100vw;
+    width: 100%;
     height: 50px;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    box-shadow: 0 28px 79px 0 rgba(66,129,121,.27);
 }
 
 #dome:before {
     position: absolute;
+    width: 100%;
     height: 40vh;
     min-height: 280px;
-    width: 100vw;
     top: 0vh;
     content: '';
     display: block;
@@ -80,19 +94,19 @@ nav#menu {
 
 #dome {
     position: relative;
+    width: 100%;
     height: 40vh;
     min-height: 280px;
-    width: 100vw;
     color: #000;
     background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 28px 79px 0 rgba(66,129,121,.27);
+
 }
 
 #dome:after {
     position: absolute;
+    width: 100%;
     height: 40vh;
     min-height: 280px;
-    width: 100vw;
     top: 0vh;
     content: '';
     display: block;
@@ -117,20 +131,25 @@ button.social {
     border-radius: 50%;
     width: 36px;
     height: 36px;
-    margin: 0 6px;
+    margin: 3px;
     background-color: transparent;
 }
 
-button.social#github {
-    background: url('../icons/github.png');
+button.social#fb {
+    background: url('../icons/fb.png');
     background-size: cover;
 }
-button.social#keybase {
-    background: url('../icons/keybase.png');
+button.social#tw {
+    background: url('../icons/tw.png');
     background-size: cover;
 }
 button.social#flickr {
     background: url('../icons/flickr.png');
+    background-size: cover;
+    background-color: #fff;
+}
+button.social#mail {
+    background: url('../icons/mail.png');
     background-size: cover;
 }
 button.flip > i {
@@ -201,18 +220,10 @@ span > a:active {
     color: #212121;
 }
 
-body {
-    overflow-x: hidden; /*IMPORTANT TO CHANGE IF EXPANDING*/
-    width: 100%;
-    height: 100vh;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-touch-callout: none
-}
-
 footer {
     position: relative;
-    width: 100vw;
-    height: 25px;
+    width: 100%;
+    height: calc(2.75em + 42px);
     bottom: 0;
     left: 0;
     right: 0;
@@ -223,56 +234,101 @@ footer {
     opacity: 0.9;
 }
 
+footer > span {
+    width: 100vw;
+    height: 2em;
+    font-size: 1.1em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
 #wrapper {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 #wrapper:before {
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
+    min-height: 100vh;
     top: 0vh;
     content: '';
     display: block;
 }
 
 section {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
 }
 
-#intro > h1 {
+#about {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+#updates {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 5% 0;
+}
+
+section > h1 {
     font-size: 3.5em;
     margin-top: 0.5em;
 }
 
-#intro > h2 {
+section > h2 {
     width: calc(100% - 1em);
     font-size: 1.2em;
     padding: 0.5em 0;
     display: inline-block;
 }
 
+#intro-text {
+    text-align: center;
+    width: 50%;
+}
+
+#intro-image {
+    text-align: center;
+    width: 50%;
+}
+
+#intro-image > img {
+    width: 90%;
+}
+
+#tweets {
+    text-align: center;
+    width: 50%;
+    margin: 0 3em;
+}
+
 #logo {
     display: inline-block;
-    text-align: center;
 }
 
 #letter {
-    width: calc(100% - 1em);
-    padding: 0 0.5em;
-    font-size: 1.2em;
+    width: calc(100% - 2em);
+    margin: 0 1em;
+    font-size: 1.1em;
     display: inline-block;
-    margin: 0.5em 0;
+    text-align: left;
     color: #fff;
     clear: both;
 }
 
+#letter > p {
+    margin: 0.5em 0;
+}
 /*@media (max-height: 300px) {
     #desc > span {
         width: calc(100% - 1em);
