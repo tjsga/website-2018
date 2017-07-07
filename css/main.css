@@ -48,10 +48,17 @@ body {
     transition: all .5s ease;
 }
 
+hr {
+    width: 100%;
+    height: 1px;
+    float: left;
+    border: none;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 header {
     position: relative;
     width: 100%;
-    
     /*height: calc(10vh + 50px);*/
 }
 
@@ -75,6 +82,7 @@ nav#menu {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    background-color: #b71c1c;
     box-shadow: 0 28px 79px 0 rgba(66,129,121,.27);
 }
 
@@ -160,7 +168,6 @@ button.flip > i {
 }
 
 button.expand > i {
-
 }
 
 i.left {
@@ -247,7 +254,7 @@ footer > span {
     width: 100%;
     min-height: 100vh;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #424242;
     
 }
 
@@ -263,6 +270,7 @@ footer > span {
 section {
     width: 100%;
     height: 100vh;
+    padding-bottom: 5vh;
     display: flex;
 }
 
@@ -270,46 +278,62 @@ section {
     display: flex;
     height: 100%;
     justify-content: center;
-    padding-top: 5%;
+    flex-flow: row wrap;
 }
 
 #updates {
     display: flex;
     height: 100%;
     justify-content: center;
-    padding: 5% 0;
+    flex-flow: row wrap;
 }
 
-section > h1 {
+section h1 {
     font-size: 3.5em;
     margin-top: 0.5em;
 }
 
-section > h2 {
-    width: calc(100% - 1em);
-    font-size: 1.2em;
-    padding: 0.5em 0;
+section h2 {
+    width: 100%;
+    font-size: 2.1em;
+    font-weight: bold;
+    color: #fff;
+    margin: 2.5vh 0;
     display: inline-block;
+    text-align: left;
+}
+
+#intro-title {
+    width: 100%;
 }
 
 #intro-text {
     text-align: center;
-    width: 50%;
+    width: calc(50% - 8vw);
+    margin: 0 2vw;
 }
 
 #intro-image {
     text-align: center;
-    width: 50%;
+    width: calc(50% - 8vw);
+    margin: 0 2vw;
+    padding-top: calc(5% + 2.1em);
 }
 
 #intro-image > img {
-    width: 90%;
+    width: 100%;
 }
 
 #tweets {
     text-align: center;
-    width: 50%;
-    margin: 0 3em;
+    width: calc(50% - 8vw);
+    margin: 0 2vw;
+}
+
+#feedback {
+    text-align: center;
+    width: calc(50% - 8vw);
+    margin: 0 2vw;
 }
 
 #logo {
@@ -329,22 +353,6 @@ section > h2 {
 #letter > p {
     margin: 0.5em 0;
 }
-/*@media (max-height: 300px) {
-    #desc > span {
-        width: calc(100% - 1em);
-        padding: 0 0.05em;
-        font-size: 0.7em;
-        display: inline-block;
-        margin: 0.5em 0;
-        clear: both;
-    }
-    #desc > h1 {
-        font-size: 1.5em;
-    }
-    #desc > h2 {
-        font-size: 0.7em;
-    }
-}*/
 
 #contact {
     margin: 1em 0 0 0;
@@ -366,7 +374,7 @@ button.menu-item {
     height: 50px;
     outline: none;
     color: #fff;
-    background-color: #b71c1c;
+    background-color: transparent;
     border: none;
 }
 
@@ -378,55 +386,56 @@ button.menu-item:active {
     font-size: 1.1em;
 }
 
-#desc:before {
-    position: absolute;
-    top: 0vh;
-    bottom: 0vh;
-    left: 0vw;
-    right: 0vw;
-    width: 100%;
-    height: 100%;
-    content: "";
-    display: block;
-    background-color:  rgba(255, 255, 255, 0.1);
-    -webkit-filter: blur(10px);
-    filter        : blur(10px); 
-    z-index: -1;
-}
-
-#desc {
-    position: relative;
-    width: 100vw;
-    min-height: 100%; /*calc(10.6em + 50px);*/
-    text-align: center;
-    vertical-align: middle;
-}
-
 @media screen and (max-width: 900px) {
-    #desc {
+    #intro-text, #intro-image, #tweets, #tweets, #feedback {
+        width: 100%;
     }
-}
-
-@media screen and (max-width: 480px), screen and (max-height: 420px) {
-    button.flip {
+    #letter {
+        font-size: 1.4em;
+    }
+    #dome:after {
+        background-position-y: 20vh;
+        background-size: 100%;
+    }
+    #dome {
         display: none;
     }
-    section {
-        height: 100vh;
+    #menu > a {
+        width: 100%;
+        height: 10vh;
+        
+        flex-basis: auto;
     }
-    #desc > h1 {
+    #menu button {
         font-size: 2em;
+        width: 100%;
+        height: 100%;
     }
-    #desc {
-        top: 0;
-        left: 0;
-        width: 100vw;
+
+    nav#menu {
+        width: 30vw;
         height: 100vh;
+        display: block;
+        position: fixed;
+        z-index: 2;
+        left: -30vw;
     }
 }
 
-@media screen and (max-width: 225px), screen and (max-height: 420px) {
-    #desc {
-        overflow-y: auto;
+@media screen and (min-width: 1800px) {
+    #letter {
+        font-size: 1.4em;
     }
+    
+}
+
+/*
+#dome:after {
+        background-position-y: 20vh;
+        background-size: 100%;
+    }
+    */
+
+@media screen and (max-width: 480px), screen and (max-height: 420px) {
+    
 }
