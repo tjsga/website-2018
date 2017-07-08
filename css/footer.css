@@ -1,0 +1,56 @@
+footer {
+    position: relative;
+    width: 100%;
+    height: calc(2.75em + 42px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    background-color: #212121;
+    z-index: 10;
+    opacity: 0.9;
+}
+
+footer>span {
+    width: 100vw;
+    height: 2em;
+    font-size: 1.1em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#contact {
+    margin: 1em 0 0 0;
+}
+
+button.social {
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin: 3px;
+    background-color: transparent;
+}
+
+button.social#fb {
+    background: url('../icons/fb.png');
+    background-size: cover;
+}
+
+button.social#tw {
+    background: url('../icons/tw.png');
+    background-size: cover;
+}
+
+button.social#flickr {
+    background: url('../icons/flickr.png');
+    background-size: cover;
+    background-color: #fff;
+}
+
+button.social#mail {
+    background: url('../icons/mail.png');
+    background-size: cover;
+}
