@@ -2,25 +2,19 @@
     #dome {
         display: none;
     }
-    #banner > h1 {
+    #banner>h1 {
         display: none;
     }
-    #wrapper {
+    #wrapper,
+    footer {
         top: 48px;
+    }
+    #intro-text {
+        margin: 0 5vw;
     }
 }
 
-@media screen and (max-width: 950px) {
-    #intro-text,
-    #intro-image,
-    #tweets,
-    #tweets,
-    #feedback {
-        width: 100%;
-    }
-    #letter {
-        font-size: 1.4em;
-    }
+@media screen and (max-width: 1100px) {
     #dome:after {
         background-position-y: 5vh;
         background-size: 100%;
@@ -30,6 +24,7 @@
         display: block;
         top: 0;
         position: fixed;
+        box-shadow: 0 28rem 79rem 0 rgba(91, 194, 182, .08), 0 40rem 32rem 0 rgba(0, 0, 0, .04);
     }
     #menu-toggle {
         position: absolute;
@@ -64,13 +59,34 @@
         height: 100vh;
         top: 0;
         left: -30vw;
-        padding-top: 10vh;
+        padding-top: 5vh;
         display: block;
         position: fixed;
         z-index: 2;
     }
     #menu-toggle {
         display: block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #intro-text,
+    #intro-image,
+    #tweets,
+    #feedback {
+        width: 100%;
+    }
+    section {
+        max-width: 750px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #intro-text,
+    #intro-image,
+    #tweets,
+    #feedback {
+        max-width: 550px;
     }
 }
 

@@ -3,17 +3,29 @@ var mb = document.querySelector("#menu-toggle"),
     tb = document.querySelector("#banner h1"),
     wr = document.querySelector("#wrapper");
 
-mb.addEventListener("click", function(){toggleSidebar(true)}, false);
-wr.addEventListener("click", function(){toggleSidebar(false)}, false);
-tb.addEventListener("click", function(){toggleSidebar(false)}, false);
-mb.addEventListener("touchleave", function(){toggleSidebar(true)}, false);
-wr.addEventListener("touchleave", function(){toggleSidebar(false)}, false);
-tb.addEventListener("touchleave", function(){toggleSidebar(false)}, false);
+mb.addEventListener("click", function () {
+    toggleSidebar(true)
+}, false);
+wr.addEventListener("click", function () {
+    toggleSidebar(false)
+}, false);
+tb.addEventListener("click", function () {
+    toggleSidebar(false)
+}, false);
+mb.addEventListener("touchleave", function () {
+    toggleSidebar(true)
+}, false);
+wr.addEventListener("touchleave", function () {
+    toggleSidebar(false)
+}, false);
+tb.addEventListener("touchleave", function () {
+    toggleSidebar(false)
+}, false);
 sb.style.disabled = true;
 
 
 function toggleSidebar(toggleOpenAllowed) {
-    if((sb.style.left == "" || sb.style.left == "-30vw") && toggleOpenAllowed) {
+    if ((sb.style.left == "" || sb.style.left == "-30vw") && toggleOpenAllowed) {
         sb.style.disabled = false;
         sb.style.left = "0px";
     } else {
