@@ -45,17 +45,19 @@ nav#menu {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: center;
     background-color: #b71c1c;
     box-shadow: 0 28px 79px 0 rgba(66, 129, 121, .27);
 }
 
 a.menu-item {
+    width: 15vw;
     color: #000;
     font-size: 1em;
     z-index: 10;
     display: inline-block;
     float: left;
-    flex-basis: calc(100vw / 4);
+    
 }
 
 button.menu-item {
@@ -70,11 +72,12 @@ button.menu-item {
 }
 
 button.menu-item:hover {
-    color: #9E9E9E;
+    color: #E0E0E0;
 }
 
 button.menu-item:active {
     font-size: 1.4em;
+    color: #BDBDBD;
 }
 
 #dome:before {
