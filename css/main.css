@@ -154,14 +154,7 @@ section {
     display: flex;
 }
 
-#about {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    flex-flow: row wrap;
-}
-
-#updates {
+#intro, #updates, #officers {
     display: flex;
     height: 100%;
     justify-content: center;

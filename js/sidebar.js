@@ -1,6 +1,7 @@
 var mb = document.querySelector("#menu-toggle"),
     sb = document.querySelector("nav#menu"),
     tb = document.querySelector("#banner h1"),
+    dm = document.querySelector("#dome"),
     wr = document.querySelector("#wrapper");
 
 mb.addEventListener("click", function () {
@@ -12,6 +13,9 @@ wr.addEventListener("click", function () {
 tb.addEventListener("click", function () {
     toggleSidebar(false)
 }, false);
+dm.addEventListener("click", function () {
+    toggleSidebar(false)
+}, false);
 mb.addEventListener("touchleave", function () {
     toggleSidebar(true)
 }, false);
@@ -19,6 +23,9 @@ wr.addEventListener("touchleave", function () {
     toggleSidebar(false)
 }, false);
 tb.addEventListener("touchleave", function () {
+    toggleSidebar(false)
+}, false);
+dm.addEventListener("touchleave", function () {
     toggleSidebar(false)
 }, false);
 sb.style.disabled = true;

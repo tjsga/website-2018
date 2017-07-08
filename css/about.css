@@ -1,0 +1,51 @@
+.officers-image {
+    width: 100%;
+    height: 20vh;
+}
+
+.officers-image:after {
+    width: 20vh;
+    height: 20vh;
+    content: '';
+    display: block;
+    position: relative;
+    left: calc(50% - 10vh);
+    background-image: url('../img/profile.jpg');
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.officers-text {
+    font-size: 1.2em;
+    color: #fff;
+    width: 100%;
+}
+
+.officers-text > span {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.officers-intro  {
+    text-align: center;
+    width: calc(50% - 8vw);
+    margin: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#excomm-text {
+    width: 100%;
+    margin: 2vw;
+}
+
+#officers, #excomm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#officers > h2, #excomm > h2 {
+    text-align: center;
+}
