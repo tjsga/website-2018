@@ -1,9 +1,12 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     #dome {
         display: none;
     }
     #banner>h1 {
         display: none;
+    }
+    #wrapper {
+        min-height: calc(100vh - 90px - 2.75em);
     }
     #wrapper,
     footer {
@@ -11,6 +14,9 @@
     }
     #intro-text {
         margin: 0 5vw;
+    }
+    .officers-intro, .excomm-intro, .senator-intro, .sponsor-intro {
+        margin: 7vw;
     }
 }
 
@@ -68,6 +74,9 @@
     #menu-toggle {
         display: block;
     }
+    .officers-intro, .excomm-intro, .senator-intro, .sponsor-intro  {
+        flex-basis: calc(50% - 4vw);
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -79,12 +88,6 @@
     }
     section {
         max-width: 750px;
-    }
-    .officers-intro {
-        width: 90vw;
-    }
-    .offiers-image {
-        width: 45%;
     }
 }
 

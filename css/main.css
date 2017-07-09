@@ -58,8 +58,12 @@ hr {
 }
 
 a {
-    color: #1976D2;
+    color: #2196F3;
     text-decoration: none;
+}
+
+li {
+    color: #fff;
 }
 
 button.flip>i {
@@ -130,12 +134,13 @@ span>a:active {
 #wrapper {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(60vh - 42px - 2.75em);
     z-index: 1;
     background-color: #424242;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 #wrapper:before {
@@ -149,12 +154,13 @@ span>a:active {
 
 section {
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     padding-bottom: 5vh;
     display: flex;
+    z-index: 2;
 }
 
-#intro, #updates, #officers {
+#intro, #updates, #officers, #excomm, #senators, #sponsors, #links {
     display: flex;
     height: 100%;
     justify-content: center;
@@ -221,4 +227,8 @@ section h2,
 
 #letter>p {
     margin: 0.5em 0;
+}
+
+#links > h2 {
+    text-align: center;
 }

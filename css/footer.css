@@ -8,8 +8,7 @@ footer {
     text-align: center;
     color: #fff;
     background-color: #212121;
-    z-index: 10;
-    opacity: 0.9;
+    z-index: 2;
 }
 
 footer>span {
