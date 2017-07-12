@@ -44,7 +44,7 @@
 #senators-desc,
 .senator-text,
 #sponsors-desc,
-.sponsor-text {
+.teacher-text {
     font-size: 1.1em;
     color: #fff;
     width: 100%;
@@ -53,7 +53,7 @@
 .officers-text>span,
 .excomm-text>span,
 .senator-text>span,
-.sponsor-text {
+.teacher-text {
     font-size: 1.4em;
     font-weight: bold;
     display: inline-block;
