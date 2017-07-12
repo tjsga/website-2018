@@ -1,4 +1,7 @@
 @media screen and (max-width: 500px) {
+    ul {
+        margin: 0 10vw;
+    }
     #dome {
         display: none;
     }
@@ -15,8 +18,14 @@
     #intro-text {
         margin: 0 5vw;
     }
-    .officers-intro, .excomm-intro, .senator-intro, .sponsor-intro {
+    .officers-intro,
+    .excomm-intro,
+    .senator-intro,
+    .sponsor-intro {
         margin: 7vw;
+    }
+    nav#menu {
+        overflow: hidden;
     }
 }
 
@@ -74,7 +83,10 @@
     #menu-toggle {
         display: block;
     }
-    .officers-intro, .excomm-intro, .senator-intro, .sponsor-intro  {
+    .officers-intro,
+    .excomm-intro,
+    .senator-intro,
+    .sponsor-intro {
         flex-basis: calc(50% - 4vw);
     }
 }
@@ -83,7 +95,9 @@
     #intro-text,
     #intro-image,
     #tweets,
-    #feedback {
+    #feedback,
+    .list,
+    .links {
         width: 100%;
     }
     section {
@@ -95,13 +109,30 @@
     #intro-text,
     #intro-image,
     #tweets,
-    #feedback {
+    #feedback,
+    .list,
+    .links {
         max-width: 550px;
     }
+    .list>ul {
+        margin: 0 5vw;
+    }
+    .desc,
+    .list>ul {
+        font-size: 1.3em;
+    }
+    /*.officers-intro, .excomm-intro, .senator-intro, .sponsor-intro {
+        flex-basis: calc(35% - 4vw);
+    }*/
 }
 
 @media screen and (min-width: 1800px) {
     #letter {
         font-size: 1.4em;
+    }
+    #excomm-desc,
+    #senators-desc,
+    #sponsors-desc {
+        margin: 0 20vw;
     }
 }

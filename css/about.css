@@ -1,9 +1,31 @@
-.officers-image, .excomm-image, .senator-image, .sponsor-image {
+#contact {
+    display: block;
+    text-align: center;
+}
+
+#contact>.desc {
+    font-size: 1.1em;
+}
+
+.quote {
+    color: #fff;
+    font-style: italic;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+.officers-image,
+.excomm-image,
+.senator-image,
+.sponsor-image {
     width: 100%;
     height: 20vh;
 }
 
-.officers-image:after, .excomm-image:after, .senator-image:after, .sponsor-image:after {
+.officers-image:after,
+.excomm-image:after,
+.senator-image:after,
+.sponsor-image:after {
     width: 20vh;
     height: 20vh;
     content: '';
@@ -16,21 +38,32 @@
     border-radius: 50%;
 }
 
-.officers-text, #excomm-desc, .excomm-text, #senators-desc, .senator-text, #sponsors-desc, .sponsor-text {
+.officers-text,
+#excomm-desc,
+.excomm-text,
+#senators-desc,
+.senator-text,
+#sponsors-desc,
+.sponsor-text {
     font-size: 1.1em;
     color: #fff;
     width: 100%;
 }
 
-.officers-text > span, .excomm-text > span, .senator-text > span, .sponsor-text {
+.officers-text>span,
+.excomm-text>span,
+.senator-text>span,
+.sponsor-text {
     font-size: 1.4em;
     font-weight: bold;
     display: inline-block;
     width: 100%;
 }
 
-
-.officers-intro, .excomm-intro, .senator-intro, .sponsor-intro  {
+.officers-intro,
+.excomm-intro,
+.senator-intro,
+.sponsor-intro {
     text-align: center;
     margin: 2vw;
     flex-basis: calc(25% - 4vw);
@@ -38,16 +71,24 @@
     flex-wrap: wrap;
 }
 
-#excomm-desc, #senators-desc, #sponsors-desc {
-    margin: 0 7vw;
+#excomm-desc,
+#senators-desc,
+#sponsors-desc {
+    margin: 0 10vw;
 }
 
-#officers, #excomm, #senators, #sponsors {
+#officers,
+#excomm,
+#senators,
+#sponsors {
     display: flex;
     flex-wrap: wrap;
-    
 }
 
-#officers > h2, #excomm > h2, #senators > h2, #sponsors > h2 {
+#contact>h2,
+#officers>h2,
+#excomm>h2,
+#senators>h2,
+#sponsors>h2 {
     text-align: center;
 }

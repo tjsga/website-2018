@@ -9,7 +9,6 @@
     src: url('../fonts/OpenSans/OpenSans-Bold.ttf')
 }
 
-
 /*http://meyerweb.com/eric/tools/css/reset/*/
 html,body,div,span,button,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     font: inherit;
@@ -160,7 +159,13 @@ section {
     z-index: 2;
 }
 
-#intro, #updates, #officers, #excomm, #senators, #sponsors, #links {
+#intro,
+#updates,
+#officers,
+#excomm,
+#senators,
+#sponsors,
+#resources {
     display: flex;
     height: 100%;
     justify-content: center;
@@ -185,6 +190,9 @@ section h2,
 
 #intro-text {
     text-align: center;
+}
+
+#intro-text {
     width: calc(50% - 8vw);
     margin: 0 2vw;
 }
@@ -229,6 +237,22 @@ section h2,
     margin: 0.5em 0;
 }
 
-#links > h2 {
+.desc {
+    font-size: 1.1em;
+    color: #fff;
+    margin: 0.5em 5vw;
+}
+
+.list>ul {
+    font-size: 1.1em;
+    margin: 0 10vw;
+}
+
+.desc>span {
+    display: inline-block;
+}
+
+.links>h2,
+.list>h2 {
     text-align: center;
 }
