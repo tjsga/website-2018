@@ -57,7 +57,7 @@ hr {
 }
 
 a {
-    color: #2196F3;
+    color: #3A96DD;
     text-decoration: none;
 }
 
@@ -123,11 +123,11 @@ button.expand {
 }
 
 span>a:hover {
-    color: #616161;
+    color: #767676;
 }
 
 span>a:active {
-    color: #212121;
+    color: #393939;
 }
 
 #wrapper {
@@ -135,7 +135,7 @@ span>a:active {
     width: 100%;
     min-height: calc(60vh - 42px - 2.75em);
     z-index: 1;
-    background-color: #424242;
+    background-color: #4C4A48;
     display: flex;
     flex-direction: column;
     align-items: center;

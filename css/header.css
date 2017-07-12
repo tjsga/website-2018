@@ -36,7 +36,10 @@ header {
     width: 48px;
     height: 48px;
     display: block;
-    background-image: url('../icons/menu.svg');
+    background-image: url('../icons/menu.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 nav#menu {
@@ -46,7 +49,7 @@ nav#menu {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color: #b71c1c;
+    background-color: rgb(164, 38, 44);
     box-shadow: 0 28px 79px 0 rgba(66, 129, 121, .27);
 }
 

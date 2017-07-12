@@ -65,7 +65,7 @@
     }
     button.menu-item:hover {
         color: #fff;
-        background-color: #7f0000;
+        background-color: rgb(118, 23, 33);
     }
     button.menu-item:active {
         font-size: 1.1em;
