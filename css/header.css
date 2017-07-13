@@ -19,6 +19,7 @@ header {
     vertical-align: middle;
     font-size: 3em;
     font-weight: bold;
+    overflow: hidden;
 }
 
 #menu-toggle {
@@ -29,7 +30,7 @@ header {
 }
 
 #menu-toggle:active {
-    background-color: #BDBDBD;
+    background-color: #e0e0e0;
 }
 
 #menu-toggle>i {

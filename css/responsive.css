@@ -79,6 +79,7 @@
         display: block;
         position: fixed;
         z-index: 2;
+        transition: all 130ms ease;
     }
     #menu-toggle {
         display: block;
