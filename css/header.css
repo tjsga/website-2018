@@ -29,6 +29,10 @@ header {
     display: none;
 }
 
+#menu-toggle:hover {
+    background-color: #f5f5f5;
+}
+
 #menu-toggle:active {
     background-color: #e0e0e0;
 }
