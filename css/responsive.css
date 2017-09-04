@@ -29,7 +29,7 @@
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
     #dome:after {
         background-position-y: 5vh;
         background-size: 100%;
@@ -90,6 +90,15 @@
     .sponsor-intro {
         flex-basis: calc(50% - 4vw);
     }
+    #intro-image {
+        margin: 0 2vw;
+    }
+    #intro-image > img {
+        margin-top: 1.2em;
+    }
+    #tweets, #feedback {
+        margin: 0 2vw;
+    } 
 }
 
 @media screen and (max-width: 1000px) {
@@ -109,8 +118,6 @@
 @media screen and (min-width: 1100px) {
     #intro-text,
     #intro-image,
-    #tweets,
-    #feedback,
     .list,
     .links {
         max-width: 550px;
@@ -128,6 +135,14 @@
 }
 
 @media screen and (min-width: 1800px) {
+    #intro-text,
+    #intro-image,
+    #tweets,
+    #feedback,
+    .list,
+    .links {
+        width: 100%;
+    }
     #letter {
         font-size: 1.4em;
     }

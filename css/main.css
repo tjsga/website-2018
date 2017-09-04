@@ -191,33 +191,23 @@ section h2,
 
 #intro-text {
     text-align: center;
-}
-
-#intro-text {
-    width: calc(50% - 8vw);
+    flex-grow: calc(50% - 8vw);
     margin: 0 2vw;
 }
 
 #intro-image {
     text-align: center;
-    width: calc(50% - 8vw);
-    margin: 0 2vw;
-    padding-top: calc(5% + 2.1em);
+    flex-grow: calc(50% - 8vw);
 }
 
 #intro-image>img {
+    margin-top: calc(83px + 2.1em);
     width: 100%;
 }
 
-#tweets {
+#tweets, #feedback {
     text-align: center;
-    width: calc(50% - 8vw);
-    margin: 0 2vw;
-}
-
-#feedback {
-    text-align: center;
-    width: calc(50% - 8vw);
+    flex-grow: calc(50% - 8vw);
     margin: 0 2vw;
 }
 
