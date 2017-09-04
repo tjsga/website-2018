@@ -166,6 +166,7 @@ section {
 #senators,
 #sponsors,
 #resources {
+    max-width: 1200px;
     display: flex;
     height: 100%;
     justify-content: center;

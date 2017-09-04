@@ -1,5 +1,6 @@
 ---
 permalink: /about
+orgs: ["officers", "excomm", "senators", "sponsors"]
 ---
 <!DOCTYPE html>
 <html>
@@ -27,246 +28,35 @@ permalink: /about
             </div>
         </section>
         <hr />
-        <section id="officers">
-            <h2>SGA Officers</h2>
-            <div class="officers-intro">
-                <div class="officers-image">
+        {% for org_name in site.data %}
+        {% assign name = page.orgs[forloop.index0] %}
+        {% assign org = site.data[name] %}
+        <section id="{{ org.username }}">
+            <h2>{{ org.name }}</h2>
+            {% for member in org.members %}
+            <div class="{{ org.username }}-intro">
+                <div class="{{ org.username }}-image">
                 </div>
-                <div class="officers-text">
-                    <span>Nick Begotka '18</span>
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Welcome to Thomas Jefferson High School for Science and Technology's school-wide Student Government
-                        Association's new home on the web! As you know, TJ is going through some very exciting times, and
-                        we want you to be a part of it with us.
-                    </p>
-                </div>
-            </div>
-            <div class="officers-intro">
-                <div class="officers-image">
-                </div>
-                <div class="officers-text">
-                    <span>Nick Begotka '18</span>
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Welcome to Thomas Jefferson High School for Science and Technology's school-wide Student Government
-                        Association's new home on the web! As you know, TJ is going through some very exciting times, and
-                        we want you to be a part of it with us.
-                    </p>
-                </div>
-            </div>
-            <div class="officers-intro">
-                <div class="officers-image">
-                </div>
-                <div class="officers-text">
-                    <span>Nick Begotka '18</span>
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Welcome to Thomas Jefferson High School for Science and Technology's school-wide Student Government
-                        Association's new home on the web! As you know, TJ is going through some very exciting times, and
-                        we want you to be a part of it with us.
-                    </p>
+                <div class="{{ org.username }}-text">
+                    {% assign year = member.year | downcase %}
+                    <span>{{ member.first }} {{ member.last }} 
+                        {% if name != "sponsors" %}
+                            '{{ year | slice: 2, 3 }}
+                        {% endif %}
+                    </span>
+                    {% if name != "officers" %}
+                    <span>{{ member.title }}</span>
+                    {% endif %}
+
+                    {% if name == "officers" %}
+                    <p>{{ member.intro }}</p>
+                    {% endif %}
                 </div>
             </div>
-            <div class="officers-intro">
-                <div class="officers-image">
-                </div>
-                <div class="officers-text">
-                    <span>Nick Begotka '18</span>
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Welcome to Thomas Jefferson High School for Science and Technology's school-wide Student Government
-                        Association's new home on the web! As you know, TJ is going through some very exciting times, and
-                        we want you to be a part of it with us.
-                    </p>
-                </div>
-            </div>
+            {% endfor %}
         </section>
         <hr />
-        <section id="excomm">
-            <h2>SGA Executive Committee</h2>
-            <div id="excomm-desc">
-                The Executive Committee (ExComm) is a integral sub-group of the SGA. Its members act as representatives of the student body.
-                The members work with the officers to organize events and activities throughout to year. While several ExComm
-                positions may have more specific roles, all are working towards the goals of the SGA. Applications to be
-                on ExComm are released every June after Class Council elections have been completed.
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-            <div class="excomm-intro">
-                <div class="excomm-image">
-                </div>
-                <div class="excomm-text">
-                    <span>William Zhang '18</span>
-                    <span>Technology Specialist</span>
-                </div>
-            </div>
-        </section>
-        <hr />
-        <section id="senators">
-            <h2>SGA Class Senators</h2>
-            <div id="senators-desc">
-                Jefferson's student government is divided into school-wide student government (SGA) and grade-level student government (Class
-                Council). While the SGA organizes school-wide events and addresses school-wide concerns and issues, Class
-                Councils represent their grade's needs and host fundraisers and events with the goal to raise money for both
-                Prom and Graduation at the end of senior year. SGA Class Senators serve as Class Council members who are
-                liaisons with the SGA.
-            </div>
-            <div class="senator-intro">
-                <div class="senator-image">
-                </div>
-                <div class="senator-text">
-                    <span>Sabria Kazmi '19</span>
-                    <span>2019 Senator</span>
-                </div>
-            </div>
-            <div class="senator-intro">
-                <div class="senator-image">
-                </div>
-                <div class="senator-text">
-                    <span>Sabria Kazmi '19</span>
-                    <span>2019 Senator</span>
-                </div>
-            </div>
-            <div class="senator-intro">
-                <div class="senator-image">
-                </div>
-                <div class="senator-text">
-                    <span>Sabria Kazmi '19</span>
-                    <span>2019 Senator</span>
-                </div>
-            </div>
-            <div class="senator-intro">
-                <div class="senator-image">
-                </div>
-                <div class="senator-text">
-                    <span>Sabria Kazmi '19</span>
-                    <span>2019 Senator</span>
-                </div>
-            </div>
-            <div class="senator-intro">
-                <div class="senator-image">
-                </div>
-                <div class="senator-text">
-                    <span>Sabria Kazmi '19</span>
-                    <span>2019 Senator</span>
-                </div>
-            </div>
-            <div class="senator-intro">
-                <div class="senator-image">
-                </div>
-                <div class="senator-text">
-                    <span>Sabria Kazmi '19</span>
-                    <span>2019 Senator</span>
-                </div>
-            </div>
-        </section>
-        <hr />
-        <section id="sponsors">
-            <h2>SGA Sponsors</h2>
-            <div id="sponsors-desc">
-                The SGA Sponsors attend all SGA meetings and functions. They also provide invaluable guidance and feedback - whether through
-                late night emails, frigid-cold morning meetings, lunch discussions, or anything in between.
-            </div>
-            <div class="sponsor-intro">
-                <div class="sponsor-image">
-                </div>
-                <div class="teacher-text">
-                    <span>Amanda Hurowitz</span>
-                    <span>TJHSST Humanities</span>
-                </div>
-            </div>
-            <div class="sponsor-intro">
-                <div class="sponsor-image">
-                </div>
-                <div class="teacher-text">
-                    <span>Marianne Razzino</span>
-                    <span>TJHSST Mathematics</span>
-                </div>
-            </div>
-        </section>
+        {% endfor %}
     </div>
     {% include footer.html %}
 </body>
