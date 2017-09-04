@@ -1,0 +1,34 @@
+{
+    "name": "SGA Officers",
+    "description": "",
+    "members": [
+        {
+            "first": "Nick",
+            "last": "Begotka",
+            "year": 2018,
+            "title": "",
+            "intro": "Welcome to Thomas Jefferson High School for Science and Technology's Student Government Association"
+        },
+        {
+            "first": "Sherry",
+            "last": "Xie",
+            "year": 2018,
+            "title": "",
+            "intro": "Welcome to Thomas Jefferson High School for Science and Technology's Student Government Association"
+        },
+        {
+            "first": "Shreya",
+            "last": "Chappidi",
+            "year": 2018,
+            "title": "",
+            "intro": "Welcome to Thomas Jefferson High School for Science and Technology's Student Government Association"
+        },
+        {
+            "first": "Sitara",
+            "last": "Uppalapati",
+            "year": 2019,
+            "title": "",
+            "intro": "Welcome to Thomas Jefferson High School for Science and Technology's Student Government Association"
+        }
+    ]
+}
