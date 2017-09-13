@@ -39,11 +39,10 @@ orgs: ["officers", "excomm", "senators", "sponsors"]
                 </div>
                 <div class="{{ org.username }}-text">
                     {% assign year = member.year | downcase %}
-                    <span>{{ member.first }} {{ member.last }} 
-                        {% if name != "sponsors" %}
-                            '{{ year | slice: 2, 3 }}
-                        {% endif %}
-                    </span>
+                    <span>{{ member.first }} {{ member.last }}</span>
+                    {% if name != "sponsors" %}
+                    <span>'{{ year | slice: 2, 3 }}</span>
+                    {% endif %}
                     {% if name != "officers" %}
                     <span>{{ member.title }}</span>
                     {% endif %}

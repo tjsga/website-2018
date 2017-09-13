@@ -5,9 +5,6 @@
     #dome {
         display: none;
     }
-    #banner>h1 {
-        display: none;
-    }
     #wrapper {
         min-height: calc(100vh - 90px - 2.75em);
     }
@@ -28,10 +25,15 @@
         overflow: hidden;
     }
 }
+@media screen and (max-width: 700px) {
+    #banner > h1 {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 1150px) {
     #dome:after {
-        background-position-y: 5vh;
+        background-position-y: 1vh;
         background-size: 100%;
     }
     #banner {
@@ -50,7 +52,6 @@
         left: 48px;
         width: calc(100% - 48px);
         height: 100%;
-        font-size: 200%;
         overflow: hidden;
     }
     #menu>a {
@@ -113,9 +114,12 @@
     section {
         max-width: 750px;
     }
+    #banner > h1 {
+        font-size: 40px;
+    }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1150px) {
     #intro-text,
     #intro-image,
     .list,
@@ -128,6 +132,9 @@
     .desc,
     .list>ul {
         font-size: 1.3em;
+    }
+    #dome:after {
+        background-position-y: 10vh;
     }
     /*.officers-intro, .excomm-intro, .senator-intro, .sponsor-intro {
         flex-basis: calc(35% - 4vw);
