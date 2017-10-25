@@ -43,6 +43,9 @@
         position: fixed;
         box-shadow: 0 28rem 79rem 0 rgba(91, 194, 182, .08), 0 40rem 32rem 0 rgba(0, 0, 0, .04);
     }
+    #banner #logo {
+        display: none;
+    }
     #menu-toggle {
         position: absolute;
         left: 0;

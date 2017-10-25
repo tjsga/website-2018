@@ -1,5 +1,11 @@
+/*#excomm:after {
+    content: '';
+    flex: auto;
+}*/
+
 #contact {
-    max-width: 1200px;
+    width: 1200px;
+    max-width: 100vw;
     display: block;
     text-align: center;
 }
@@ -20,15 +26,16 @@
 .senators-image,
 .sponsors-image {
     width: 100%;
-    height: 20vh;
+    height: calc(25vh - 4vw);
+    margin-bottom: 1vh;
 }
 
 .officers-image:after,
 .excomm-image:after,
 .senators-image:after,
 .sponsors-image:after {
-    width: 20vh;
-    height: 20vh;
+    width: calc(25vh - 4vw);
+    height: calc(25vh - 4vw);
     content: '';
     display: block;
     position: relative;
@@ -68,7 +75,6 @@
     text-align: center;
     margin: 2vw;
     flex-basis: calc(25% - 4vw);
-    display: flex;
     flex-wrap: wrap;
 }
 

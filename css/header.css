@@ -14,13 +14,21 @@ header {
     z-index: 3;
 }
 
-#banner h1 {
-    display: table-cell;
+#banner #logo {
+    content: '';
+    height: 10vh;
+    width: 10vh;
+    display: inline-block;
     vertical-align: middle;
     font-size: 2.5em;
     font-weight: bold;
     overflow: hidden;
+    background-image: url('../img/logo.png');
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 #menu-toggle {
     cursor: pointer;
