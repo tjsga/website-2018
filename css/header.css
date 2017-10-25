@@ -17,14 +17,14 @@ header {
 #banner #logo {
     content: '';
     height: 10vh;
-    width: 10vh;
+    width: 100%;
     display: inline-block;
     vertical-align: middle;
     font-size: 2.5em;
     font-weight: bold;
     overflow: hidden;
     background-image: url('../img/logo.png');
-    background-size: 90%;
+    background-size: 8vh;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -62,7 +62,7 @@ nav#menu {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color: rgb(164, 38, 44);
+    border-bottom: 3px solid rgb(164, 38, 44);
     box-shadow: 0 28px 79px 0 rgba(66, 129, 121, .27);
 }
 
@@ -81,18 +81,18 @@ button.menu-item {
     width: 100%;
     height: 50px;
     outline: none;
-    color: #fff;
+    color: #000;
     background-color: transparent;
     border: none;
 }
 
 button.menu-item:hover {
-    color: #E0E0E0;
+    color: #767676;
 }
 
 button.menu-item:active {
     font-size: 1.4em;
-    color: #BDBDBD;
+    color: #9f9f9f;
 }
 
 #dome:before {
