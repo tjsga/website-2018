@@ -25,8 +25,10 @@
 .excomm-image,
 .senators-image,
 .sponsors-image {
-    width: 12vw;
-    height: 12vw;
+    width: 17vw;
+    max-width: 200px;
+    height: 17vw;
+    max-height: 200px;
     margin-bottom: 1vh;
 }
 
@@ -73,8 +75,8 @@
 .sponsors-intro {
     text-align: center;
     margin: 1.5vw;
-    /*flex-basis: calc(25% - 4vw);*/
-    max-width: 12vw;
+    width: 17vw;
+    max-width: 200px;
     flex-wrap: wrap;
 }
 
