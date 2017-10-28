@@ -156,7 +156,6 @@ span>a:active {
 section {
     width: 100%;
     min-height: 100%;
-    padding-bottom: 5vh;
     display: flex;
     z-index: 2;
 }
@@ -175,6 +174,15 @@ section {
     flex-flow: row wrap;
 }
 
+#intro,
+#updates,
+#resources {
+    padding: 2.5vh 0;
+}
+
+#sponsors {
+    padding-bottom: 2.5vh;
+}
 
 section h1 {
     font-size: 3.5em;
@@ -204,7 +212,7 @@ section h2,
 }
 
 #intro-image>img {
-    margin-top: calc(83px + 2.1em);
+    margin-top: calc(5vh + 3.1em);
     width: 100%;
 }
 

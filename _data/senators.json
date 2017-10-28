@@ -4,8 +4,22 @@
     "description": "Jefferson's student government is divided into school-wide student government (SGA) and grade-level student government (Class Council). While the SGA organizes school-wide events and addresses school-wide concerns and issues, Class Councils represent their grade's needs and host fundraisers and events with the goal to raise money for both Prom and Graduation at the end of senior year. SGA Class Senators serve as Class Council members who are liaisons with the SGA.",
     "members": [
         {
-            "first": "Sabria",
-            "last": "Kazmi",
+            "first": "Ashley",
+            "last": "Lin",
+            "year": 2018,
+            "title": "2018 Senator",
+            "intro": ""
+        },
+        {
+            "first": "Anna",
+            "last": "Lulushi",
+            "year": 2018,
+            "title": "2018 Senator",
+            "intro": ""
+        },
+        {
+            "first": "Laura",
+            "last": "Gersony",
             "year": 2019,
             "title": "2019 Senator",
             "intro": ""
@@ -18,17 +32,17 @@
             "intro": ""
         },
         {
-            "first": "Sabria",
-            "last": "Kazmi",
-            "year": 2019,
-            "title": "2019 Senator",
+            "first": "Divjot",
+            "last": "Bedi",
+            "year": 2020,
+            "title": "2020 Senator",
             "intro": ""
         },
         {
-            "first": "Sabria",
-            "last": "Kazmi",
-            "year": 2019,
-            "title": "2019 Senator",
+            "first": "Megan",
+            "last": "Dass",
+            "year": 2020,
+            "title": "2020 Senator",
             "intro": ""
         }
     ]

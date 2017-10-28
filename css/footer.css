@@ -1,7 +1,7 @@
 footer {
     position: relative;
     width: 100%;
-    height: calc(2.75em + 42px);
+    padding: calc((2.75em + 42px) / 4) 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -11,13 +11,13 @@ footer {
     z-index: 2;
 }
 
-footer>span {
+/*footer>span {
     width: 100vw;
     height: 2em;
     font-size: 1.1em;
     display: table-cell;
     vertical-align: middle;
-}
+}*/
 
 #contact {
     margin: 1em 0 0 0;

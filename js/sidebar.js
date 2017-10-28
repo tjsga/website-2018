@@ -1,6 +1,6 @@
 var mb = document.querySelector("#menu-toggle"),
     sb = document.querySelector("nav#menu"),
-    tb = document.querySelector("#banner h1"),
+    tb = document.querySelector("#logo"),
     dm = document.querySelector("#dome"),
     wr = document.querySelector("#wrapper");
 
