@@ -63,7 +63,7 @@ nav#menu {
     flex-wrap: nowrap;
     justify-content: center;
     border-bottom: 3px solid rgb(164, 38, 44);
-    box-shadow: 0 28px 79px 0 rgba(66, 129, 121, .27);
+    /*box-shadow: 0 28px 79px 0 rgba(66, 129, 121, .27);*/
 }
 
 a.menu-item {
@@ -130,7 +130,7 @@ button.menu-item:active {
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position-x: center;
-    background-position-y: 7.5vh;
+    background-position-y: 5vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: -2;

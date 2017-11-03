@@ -1,6 +1,6 @@
 @media screen and (max-width: 1150px) {
     #dome:after {
-        background-position-y: 1vh;
+        background-position-y: 0;
         background-size: 100%;
     }
     #banner {
@@ -107,6 +107,9 @@
     #banner > h1 {
         display: none;
     }
+    #dome:after {
+        background-position-y: 5vh;
+    }
     .officers-intro,
     .excomm-intro,
     .senators-intro,
@@ -155,9 +158,6 @@
     .desc,
     .list>ul {
         font-size: 1.3em;
-    }
-    #dome:after {
-        background-position-y: 2.5vh;
     }
 }
 

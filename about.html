@@ -28,9 +28,9 @@ orgs: ["officers", "excomm", "senators", "sponsors"]
             </div>
         </section>
         <hr />
-        {% for org_name in site.data %}
+        {% for org_name in site.data.about %}
         {% assign name = page.orgs[forloop.index0] %}
-        {% assign org = site.data[name] %}
+        {% assign org = site.data.about[name] %}
         <section id="{{ org.username }}">
             <h2>{{ org.name }}</h2>
             {% for member in org.members %}
