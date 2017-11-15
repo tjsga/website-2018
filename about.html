@@ -35,14 +35,29 @@ orgs: ["officers", "excomm", "senators", "sponsors"]
             <h2>{{ org.name }}</h2>
             {% for member in org.members %}
             <div class="{{ org.username }}-intro">
+            {% assign year = member.year | downcase %}
+            {% assign first = member.first | slice: 0 %}
+            {% assign last = member.last | slice: 0,7 %}
+            {% if name != "sponsors" %}
+                {% capture filename %}img/people/{{ year }}{{ first }}{{ last }}.jpg{% endcapture %}
+            {% else %}
+                {% capture filename %}img/people/{{ first }}{{ last }}.jpg{% endcapture %}
+            {% endif %}
+	    {% capture exists %}
+                {% file_exists: {{ path }} %}
+            {% endcapture %}
+            {% if exists == false %}
+                {% capture filename %}img/profile.jpg{% endcapture %}
+            {% endif %}
                 <div class="{{ org.username }}-image">
+                    <img src="{{ filename | strip_newlines | downcase }}" />
                 </div>
                 <div class="{{ org.username }}-text">
-                    {% assign year = member.year | downcase %}
                     <span>{{ member.first }} {{ member.last }}</span>
                     {% if name != "sponsors" and name != "senators" %}
                     <span>{{ year }}</span>
                     {% endif %}
+
                     {% if name != "officers" %}
                     <span>{{ member.title }}</span>
                     {% endif %}

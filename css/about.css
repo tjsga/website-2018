@@ -39,12 +39,20 @@
 .sponsors-image:after {
     width: 100%;
     height: 100%;
-    content: '';
     display: block;
     position: relative;
     background-image: url('../img/profile.jpg');
     background-size: contain;
     background-position: center;
+    border-radius: 50%;
+}
+
+.officers-image img,
+.excomm-image img,
+.senators-image img,
+.sponsors-image img {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
 }
 
