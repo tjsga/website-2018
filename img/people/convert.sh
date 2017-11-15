@@ -2,9 +2,9 @@
 FILES=.
 for f in $FILES/*.jpg
 do
-    convert $f -strip -resize 150x150 -quality 50 ${f%.*}-new.jpg;
     mkdir -p $FILES/out;
-    mv $FILES/*-new.jpg $FILES/out;
+    convert $f -strip -quality 95 ${f%.*}-new.jpg;
+    mv $FILES/*-new.jpg $FILES/out/$f;
 
 done
 
