@@ -45,6 +45,9 @@
     button.menu-item:active {
         font-size: 1.1em;
     }
+    #logo-wrapper {
+        display: none;
+    }
     nav#menu {
         width: 30vw;
         max-width: 200px;
