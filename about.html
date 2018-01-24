@@ -44,7 +44,7 @@ orgs: ["officers", "excomm", "senators", "sponsors"]
                 {% capture filename %}img/people/{{ first }}{{ last }}.jpg{% endcapture %}
             {% endif %}
 	    {% capture exists %}
-                {% file_exists: {{ path }} %}
+                {% file_exists {{ path }} %}
             {% endcapture %}
             {% if exists == false %}
                 {% capture filename %}img/profile.jpg{% endcapture %}

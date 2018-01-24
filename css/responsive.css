@@ -100,6 +100,8 @@
     }
     section {
         max-width: 750px;
+	flex-grow: 1;
+	flex-shrink: 0;
     }
     #banner > h1 {
         font-size: 40px;
@@ -137,7 +139,12 @@
         display: none;
     }
     #wrapper {
-        min-height: calc(100vh - 90px - 2.75em);
+        /*min-height: 100%calc(100vh - 90px - 2.75em);
+	*/
+	/*flex-grow: 1;*/
+	/*flex-shrink: 0;*/
+	height: auto;
+	min-height: 100%;
     }
     #wrapper,
     footer {

@@ -135,12 +135,18 @@ span>a:active {
 #wrapper {
     position: relative;
     width: 100%;
-    min-height: calc(60vh - 42px - 2.75em);
+	
+    /*min-height: calc(60vh - 42px - 2.75em);
+	*/
     z-index: 1;
     background-color: #4C4A48;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     align-items: center;
+	*/
+    height: auto;
+    min-height: 100%;
+    
     overflow: hidden;
 }
 
@@ -157,6 +163,8 @@ section {
     width: 100%;
     min-height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
 }
 
@@ -167,7 +175,7 @@ section {
 #senators,
 #sponsors,
 #resources {
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     display: flex;
     height: 100%;
     justify-content: center;
@@ -218,7 +226,8 @@ section h2,
 
 #tweets, #feedback {
     text-align: center;
-    flex-grow: calc(50% - 8vw);
+    /*flex-grow: calc(50% - 8vw);
+*/
     margin: 0 2vw;
 }
 

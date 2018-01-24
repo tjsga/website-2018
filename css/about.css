@@ -87,6 +87,7 @@
     width: 17vw;
     max-width: 200px;
     flex-wrap: wrap;
+    flex-basis: 50%;
 }
 
 #excomm-desc,
