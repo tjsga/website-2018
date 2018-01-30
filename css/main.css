@@ -177,6 +177,8 @@ section {
 #resources {
     /*max-width: 1200px;*/
     display: flex;
+    margin: 0 20vw;
+    width: 60vw;
     height: 100%;
     justify-content: center;
     flex-flow: row wrap;
