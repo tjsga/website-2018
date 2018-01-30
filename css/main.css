@@ -137,7 +137,8 @@ span>a:active {
     width: 100%;
 	
     /*min-height: calc(60vh - 42px - 2.75em);
-	*/
+    min-height: calc(100vh - 55px - 280px - 86px);
+    */
     z-index: 1;
     background-color: #4C4A48;
     /*display: flex;
@@ -177,8 +178,8 @@ section {
 #resources {
     /*max-width: 1200px;*/
     display: flex;
-    margin: 0 20vw;
-    width: 60vw;
+    margin: 0 17.5vw;
+    width: 65vw;
     height: 100%;
     justify-content: center;
     flex-flow: row wrap;
