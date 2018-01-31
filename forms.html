@@ -14,7 +14,7 @@ sections: ["general", "events", "elections"]
 <body>
     {% include header.html %}
     <div id="wrapper" class="fluid">
-        <section id="resources">
+        <section id="forms">
             {% for form_name in site.data.forms %}
             {% assign name = page.sections[forloop.index0] %}
             {% assign form = site.data.forms[name] %}
