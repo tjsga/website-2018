@@ -1,19 +1,37 @@
 ---
 permalink: /forms
+sections: ["general", "events", "elections"]
 ---
 <!DOCTYPE html>
 <html>
 
 <head>
+    <link href="css/about.css" rel="stylesheet" />
     {% include head.html %}
-    <title>Forms - TJSGA</title>
+    <title>About - TJSGA</title>
 </head>
 
 <body>
     {% include header.html %}
     <div id="wrapper" class="fluid">
-        <section id="links">
+        <section id="resources">
+            {% for form_name in site.data.forms %}
+            {% assign name = page.sections[forloop.index0] %}
+            {% assign form = site.data.forms[name] %}
+            <div class="list">
 
+                <h2>{{ form.name }}</h2>
+                <ul>
+                    {% for item in form.items %}
+                    <li>
+                        <a href="{{ item.link }}">
+                            {{ item.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
         </section>
     </div>
     {% include footer.html %}
