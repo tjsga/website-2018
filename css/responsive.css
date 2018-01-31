@@ -143,12 +143,23 @@
 	*/
 	/*flex-grow: 1;*/
 	/*flex-shrink: 0;*/
-	height: auto;
-	min-height: 100%;
+        height: auto;
+        min-height: calc(100vh - 130px);
     }
     #wrapper,
     footer {
         top: 48px;
+    }
+    #intro,
+    #updates,
+    #officers,
+    #excomm,
+    #senators,
+    #sponsors,
+    #resources,
+    #forms {
+        margin: 0 10vw;
+        width: 80vw;
     }
     #intro-text {
         margin: 0 5vw;

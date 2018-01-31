@@ -176,7 +176,8 @@ section {
 #excomm,
 #senators,
 #sponsors,
-#resources {
+#resources,
+#forms {
     /*max-width: 1200px;*/
     display: flex;
     margin: 0 17.5vw;
