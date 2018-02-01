@@ -189,8 +189,14 @@ section {
 
 #intro,
 #updates,
-#resources {
+#resources,
+#forms {
     padding: 2.5vh 0;
+}
+
+#resources,
+#forms {
+    min-height: calc(60vh - ((2.75em + 42px) / 4));
 }
 
 #sponsors {
