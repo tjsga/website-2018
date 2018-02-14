@@ -180,8 +180,8 @@ section {
 #forms {
     /*max-width: 1200px;*/
     display: flex;
-    margin: 0 17.5vw;
-    width: 65vw;
+    margin: 0 12.5vw;
+    width: 75vw;
     height: 100%;
     justify-content: center;
     flex-flow: row wrap;
