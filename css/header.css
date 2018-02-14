@@ -73,7 +73,7 @@ a.menu-item {
 
 button.menu-item {
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 1.8em;
     width: 100%;
     height: 100%;
     outline: none;
@@ -126,7 +126,7 @@ button.menu-item:active {
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position-x: center;
-    background-position-y: 5vh;
+    background-position-y: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: -2;
