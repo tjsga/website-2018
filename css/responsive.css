@@ -138,10 +138,6 @@
         display: none;
     }
     #wrapper {
-        /*min-height: 100%calc(100vh - 90px - 2.75em);
-	*/
-	/*flex-grow: 1;*/
-	/*flex-shrink: 0;*/
         height: auto;
         min-height: calc(100vh - 130px);
     }
