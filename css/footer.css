@@ -11,14 +11,6 @@ footer {
     z-index: 2;
 }
 
-/*footer>span {
-    width: 100vw;
-    height: 2em;
-    font-size: 1.1em;
-    display: table-cell;
-    vertical-align: middle;
-}*/
-
 button.social {
     cursor: pointer;
     outline: none;
