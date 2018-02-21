@@ -22,22 +22,22 @@ button.social {
 }
 
 button.social#fb {
-    background: url('../icons/fb.png');
+    background: url('../icons/fb.jpg');
     background-size: cover;
 }
 
 button.social#tw {
-    background: url('../icons/tw.png');
+    background: url('../icons/tw.jpg');
     background-size: cover;
 }
 
 button.social#flickr {
-    background: url('../icons/flickr.png');
+    background: url('../icons/flickr.jpg');
     background-size: cover;
     background-color: #fff;
 }
 
 button.social#mail {
-    background: url('../icons/mail.png');
+    background: url('../icons/mail.jpg');
     background-size: cover;
 }
