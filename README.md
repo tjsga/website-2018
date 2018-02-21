@@ -1,7 +1,7 @@
 # SGA Website #
 
 ## Installing ##
-* `bundle install` - This may required elevated privileges, depending on the machine.
+* `bundle install --path gems/`
 
 ## Running ##
 * `bundle exec jekyll serve --port $PORT` where `$PORT` is desired port.
