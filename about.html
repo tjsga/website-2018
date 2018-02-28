@@ -27,17 +27,15 @@ orgs: ["officers", "excomm", "senators", "sponsors"]
             </div>
         </section>
         <hr />
-        {% for org_name in site.data.about %}
-        {% assign name = page.orgs[forloop.index0] %}
-        {% assign org = site.data.about[name] %}
-        <section id="{{ org.username }}">
-            <h2>{{ org.name }}</h2>
+        {% for org in site.data.about %}
+        <section id="{{ org['username'] }}">
+            <h2>{{ org['name'] }}</h2>
             {% for member in org.members %}
             <div class="{{ org.username }}-intro">
             {% assign year = member.year | downcase %}
             {% assign first = member.first | slice: 0 %}
             {% assign last = member.last | slice: 0,7 %}
-            {% if name != "sponsors" %}
+            {% if org['username'] != "sponsors" %}
                 {% capture filename %}img/people/{{ year }}{{ first }}{{ last }}.jpg{% endcapture %}
             {% else %}
                 {% capture filename %}img/people/{{ first }}{{ last }}.jpg{% endcapture %}
@@ -53,15 +51,15 @@ orgs: ["officers", "excomm", "senators", "sponsors"]
                 </div>
                 <div class="{{ org.username }}-text">
                     <span>{{ member.first }} {{ member.last }}</span>
-                    {% if name != "sponsors" and name != "senators" %}
+                    {% if org['username'] != "sponsors" and org['username'] != "senators" %}
                     <span>{{ year }}</span>
                     {% endif %}
 
-                    {% if name != "officers" %}
+                    {% if org['username'] != "officers" %}
                     <span>{{ member.title }}</span>
                     {% endif %}
 
-                    {% if name == "officers" %}
+                    {% if org['username'] == "officers" %}
                     <p>{{ member.intro }}</p>
                     {% endif %}
                 </div>
