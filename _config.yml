@@ -29,6 +29,11 @@ plugins:
   - jekyll-feed
 exclude: [gems]
 
+jekyll_get:
+  - data: about
+    json: 'https://sgawebsite-e30e2.firebaseio.com/about.json'
+  - data: forms
+    json: 'https://sgawebsite-e30e2.firebaseio.com/forms.json'
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
