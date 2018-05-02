@@ -1,0 +1,43 @@
+footer {
+    position: relative;
+    width: 100%;
+    padding: calc((2.75em + 42px) / 4) 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    background-color: #393939;
+    z-index: 2;
+}
+
+button.social {
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin: 3px;
+    background-color: transparent;
+}
+
+button.social#fb {
+    background: url('../icons/fb.jpg');
+    background-size: cover;
+}
+
+button.social#tw {
+    background: url('../icons/tw.jpg');
+    background-size: cover;
+}
+
+button.social#flickr {
+    background: url('../icons/flickr.png');
+    background-size: cover;
+    background-color: #fff;
+}
+
+button.social#mail {
+    background: url('../icons/mail.jpg');
+    background-size: cover;
+}
