@@ -1,0 +1,189 @@
+@media screen and (max-width: 1150px) {
+    #dome:after {
+        background-position-y: 0;
+    }
+    #banner {
+        height: 48px;
+        display: block;
+        top: 0;
+        position: fixed;
+        box-shadow: 0 28rem 79rem 0 rgba(91, 194, 182, .08), 0 40rem 32rem 0 rgba(0, 0, 0, .04);
+        border-bottom: 3px solid rgb(164, 38, 44);
+    }
+    #banner #logo {
+        height: 100%;
+        width: 100%;
+        background: none;
+    }
+    #menu-toggle {
+        position: absolute;
+        left: 0;
+    }
+    #banner>h1 {
+        position: absolute;
+        left: 48px;
+        width: calc(100% - 48px);
+        height: 100%;
+        overflow: hidden;
+    }
+    #menu>a {
+        width: 100%;
+        min-height: 75px;
+        height: 10vh;
+        flex-basis: auto;
+    }
+    button.menu-item {
+        font-size: 1.2em;
+        width: 100%;
+        height: 100%;
+    }
+    button.menu-item:hover {
+        color: #fff;
+        background-color: rgb(164, 38, 44);
+    }
+    button.menu-item:active {
+        font-size: 1.1em;
+    }
+    #logo-wrapper {
+        display: none;
+    }
+    nav#menu {
+        width: 30vw;
+        max-width: 200px;
+        height: 100vh;
+        top: 0;
+        left: -30vw;
+        padding-top: 48px;
+        display: block;
+        position: fixed;
+        z-index: 2;
+        transition: all 130ms ease;
+        background-color: #fff;
+        border: none;
+    }
+    #menu-toggle {
+        display: block;
+    }
+    .officers-intro,
+    .excomm-intro,
+    .senators-intro,
+    .sponsors-intro {
+        width: 22vw;
+        max-width: 200px;
+    }
+    .officers-image,
+    .excomm-image,
+    .senators-image,
+    .sponsors-image {
+        width: 22vw;
+        height: 22vw;
+    }
+    #intro-image {
+    }
+    #intro-image > img {
+        margin-top: 1.2em;
+    }
+    #tweets, #feedback {
+        margin: 0 2vw;
+    } 
+}
+
+@media screen and (max-width: 1000px) {
+    #intro-text,
+    #intro-image,
+    #tweets,
+    #feedback,
+    .list,
+    .links {
+        width: 100%;
+    }
+    section {
+        max-width: 750px;
+	    flex-grow: 1;
+	    flex-shrink: 0;
+    }
+    #banner > h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #banner > h1 {
+        display: none;
+    }
+    #dome:after {
+        background-position-y: 5vh;
+    }
+    .officers-intro,
+    .excomm-intro,
+    .senators-intro,
+    .sponsors-intro {
+        width: 97vw;
+        max-width: 200px;
+    }
+    .officers-image,
+    .excomm-image,
+    .senators-image,
+    .sponsors-image {
+        width: 97vw;
+        height: 97vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    ul {
+        margin: 0 10vw;
+    }
+    #dome {
+        display: none;
+    }
+    #wrapper {
+        height: auto;
+        min-height: calc(100vh - 130px);
+    }
+    #wrapper,
+    footer {
+        top: 48px;
+    }
+    #intro,
+    #updates,
+    #officers,
+    #excomm,
+    #senators,
+    #sponsors,
+    #resources,
+    #forms {
+        margin: 0 10vw;
+        width: 80vw;
+    }
+    #intro-text {
+        margin: 0 5vw;
+    }
+    nav#menu {
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 1150px) {
+    #intro-text,
+    #intro-image,
+    .list,
+    .links {
+        width: 37.5vw;
+        max-width: 550px;
+    }
+    .desc,
+    .list>ul {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    #letter {
+        font-size: 1.4em;
+    }
+    #excomm-desc,
+    #senators-desc,
+    #sponsors-desc {
+        margin: 0 20vw;
+    }
+}
