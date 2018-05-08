@@ -21,9 +21,9 @@ import requests
 about = requests.get("https://sgawebsite-e30e2.firebaseio.com/about.json")
 forms = requests.get("https://sgawebsite-e30e2.firebaseio.com/forms.json")
 with open("about.json", 'w') as f:
-    f.write(about.json())
+    f.write(str(about.json()[0]))
 with open("forms.json", 'w') as f:
-    f.write(forms.json())
+    f.write(str(forms.json()[0]))
 
 
 urlpatterns = [
