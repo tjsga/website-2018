@@ -17,3 +17,4 @@ config.py
 settings.py
 env/
 db.sqlite3
+*.json
