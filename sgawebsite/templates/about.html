@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+{% load static %}
 <head>
-    <link href="css/about.css" rel="stylesheet" />
-    {% include head.html %}
+    <link href="{% static 'css/about.css' %}" rel="stylesheet" />
+    {% include 'head.html' %}
     <title>About - TJSGA</title>
 </head>
 <body>
-    {% include header.html %}
+    {% include 'header.html' %}
     <div id="wrapper" class="fluid">
         <section id="contact">
             <h2>Contact Us!</h2>
@@ -63,6 +64,6 @@
         </section>
         {% endfor %}
     </div>
-    {% include footer.html %}
+    {% include 'footer.html' %}
 </body>
 </html>
