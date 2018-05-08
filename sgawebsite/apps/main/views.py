@@ -1,14 +1,7 @@
 from django.shortcuts import render
 
-@app.route("/")
-def index():
-    announcements = Announcement.query.all()
-    return render_template(
-        "index.html",
-        prefix=ROOT_URL,
-        announcements=announcements)
+def index(request):
+    return render(request, "index.html")
 
-# Create your views here.
-
-def index():
-    return
+def about(request):
+    return render(request, "about.html")
