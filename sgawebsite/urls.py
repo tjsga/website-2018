@@ -16,6 +16,15 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from .apps.main import urls as main
+import requests
+
+about = requests.get("https://sgawebsite-e30e2.firebaseio.com/about.json")
+forms = requests.get("https://sgawebsite-e30e2.firebaseio.com/forms.json")
+with open("about.json", 'w') as f:
+    f.write(about.json())
+with open("forms.json", 'w') as f:
+    f.write(forms.json())
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
