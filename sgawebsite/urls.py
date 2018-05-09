@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
+from django.views.generic.simple import direct_to_template
 from django.contrib import admin
 from .apps.main import urls as main
 import requests
@@ -28,5 +29,6 @@ with open("forms.json", 'w') as f:
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include(main)) 
+    url(r'^', include(main)),
+    url(r'^robots\.txt$', direct_to_template, {'template': 'robots.txt', 'mimetype': 'text/plain'})
 ]
