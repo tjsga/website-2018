@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <link href="{% static 'css/about.css' %}" rel="stylesheet" />
+    {% include 'head.html' %}
+    <title>About - TJSGA</title>
+</head>
+<body>
+    {% include 'header.html' %}
+    <div id="wrapper" class="fluid">
+        <section id="contact">
+            <h2>Contact Us!</h2>
+            <div class="desc">
+                <span class="quote">
+                    "The world is moved not only by the mighty shoves of the heroes, but also by the aggregate of the tiny pushes of each honest worker."  - Helen Keller
+                </span>
+            </div>
+            <div class="desc">
+                Contact us at
+                <a href="mailto:sga.tjhsst@gmail.com">sga.tjhsst@gmail.com</a>. We would love to answer questions or hear
+                about how you think we can improve TJ!
+            </div>
+        </section>
+        <hr />
+        {{ categories }}
+        <!--
+        {% for org in categories %}
+        <section id="{{ org[0] }}">
+            <h2>{{ org[1] }}</h2>
+            {% for member in org.members %}
+            <div class="{{ org.username }}-intro">
+            {% assign year = member.year | downcase %}
+            {% assign first = member.first | slice: 0 %}
+            {% assign last = member.last | slice: 0,7 %}
+            {% if org['username'] != "sponsors" %}
+                {% capture filename %}img/people/{{ year }}{{ first }}{{ last }}.jpg{% endcapture %}
+            {% else %}
+                {% capture filename %}img/people/{{ first }}{{ last }}.jpg{% endcapture %}
+            {% endif %}
+	    {% capture exists %}
+                {% file_exists {{ path }} %}
+            {% endcapture %}
+            {% if exists == false %}
+                {% capture filename %}img/profile.jpg{% endcapture %}
+            {% endif %}
+                <div class="{{ org.username }}-image">
+                    <img src="{{ filename | strip_newlines | downcase }}" />
+                </div>
+                <div class="{{ org.username }}-text">
+                    <span>{{ member.first }} {{ member.last }}</span>
+                    {% if org['username'] != "sponsors" and org['username'] != "senators" %}
+                    <span>{{ year }}</span>
+                    {% endif %}
+
+                    {% if org['username'] != "officers" %}
+                    <span>{{ member.title }}</span>
+                    {% endif %}
+
+                    {% if org['username'] == "officers" %}
+                    <p>{{ member.intro }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        {% endfor %}
+        -->
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>
