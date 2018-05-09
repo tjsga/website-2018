@@ -14,21 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
-from django.views.generic.simple import direct_to_template
+from django.views.generic import TemplateView
 from django.contrib import admin
 from .apps.main import urls as main
 import requests
 
-about = requests.get("https://sgawebsite-e30e2.firebaseio.com/about.json")
-forms = requests.get("https://sgawebsite-e30e2.firebaseio.com/forms.json")
-with open("about.json", 'w') as f:
+about = requests.get('https://sgawebsite-e30e2.firebaseio.com/about.json')
+forms = requests.get('https://sgawebsite-e30e2.firebaseio.com/forms.json')
+with open('about.json', 'w') as f:
     f.write(str(about.json()[0]))
-with open("forms.json", 'w') as f:
+with open('forms.json', 'w') as f:
     f.write(str(forms.json()[0]))
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(main)),
-    url(r'^robots\.txt$', direct_to_template, {'template': 'robots.txt', 'mimetype': 'text/plain'})
+    url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt'), name='robots.txt')
 ]
