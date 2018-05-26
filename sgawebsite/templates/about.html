@@ -37,14 +37,15 @@
                         {% if member.category != 'sponsors' and member.category != 'senators' %}
                         <span>{{ member.year }}</span>
                         {% endif %}
-                    </div>
-                    {% if member.category != "officers" %}
-                    <span>{{ member.title }}</span>
-                    {% endif %}
 
-                    {% if member.category == "officers" and member.intro != '' %}
-                    <p>{{ member.intro }}</p>
-                    {% endif %}
+                        {% if member.category != "officers" %}
+                        <span>{{ member.title }}</span>
+                        {% endif %}
+
+                        {% if member.category == "officers" and member.intro != '' %}
+                        <p>{{ member.intro }}</p>
+                        {% endif %}
+                    </div>
                 </div>
             {% endfor %}
             {% endwith %}
