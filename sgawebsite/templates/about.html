@@ -26,13 +26,25 @@
         {% for org in categories %}
         <section id="{{ org.0 }}">
             <h2>{{ org.1 }}</h2>
-            <div class="{{ org.username }}-intro">
             {% with key=data|get_item:org.0 %}
             {% for member in key %}
                 <div class="{{ org.0 }}-intro">
-                    {% with year=member.year first=member.first_name last=member.last_name %}
-                    {{ first }} {{ last }} {{ year }}
-                    {% endwith %}
+                    <div class="{{ org.0 }}-image">
+                        <img src="{{ member|filename }}" />
+                    </div>
+                    <div class="{{ org.0 }}-text">
+                        <span>{{ member.first_name }} {{ member.last_name }}</span>
+                        {% if member.category != 'sponsors' and member.category != 'senators' %}
+                        <span>{{ member.year }}</span>
+                        {% endif %}
+                    </div>
+                    {% if member.category != "officers" %}
+                    <span>{{ member.title }}</span>
+                    {% endif %}
+
+                    {% if member.category == "officers" and member.intro != '' %}
+                    <p>{{ member.intro }}</p>
+                    {% endif %}
                 </div>
             {% endfor %}
             {% endwith %}

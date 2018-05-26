@@ -16,14 +16,6 @@ class Member(models.Model):
     def __str__(self):
         return self.first_name + ' ' + self.last_name
 
-    def username(self):
-        if self.first_name and self.last_name:
-            if self.year > 0:
-                return str(year) + first_name[:1] + last_name[:7]
-            else:
-                return first_name[:1] + last_name[:7]
-        return None
-
 
 class Resource(models.Model):
     name = models.CharField(max_length=50)
