@@ -26,10 +26,16 @@
         {% for org in categories %}
         <section id="{{ org.0 }}">
             <h2>{{ org.1 }}</h2>
-            {% for member in categories.org %}
-            <div class="{{ org.0 }}-intro">
-            </div>
+            <div class="{{ org.username }}-intro">
+            {% with key=data|get_item:org.0 %}
+            {% for member in key %}
+                <div class="{{ org.0 }}-intro">
+                    {% with year=member.year first=member.first_name last=member.last_name %}
+                    {{ first }} {{ last }} {{ year }}
+                    {% endwith %}
+                </div>
             {% endfor %}
+            {% endwith %}
         </section>
         {% endfor %}
     </div>
