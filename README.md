@@ -1,16 +1,21 @@
 # SGA Website #
 
+## Setting up Production ##
+* Create a blank sqlite database with `sqlite3 db.sqlite3 ".databases"
+
 ## Installing ##
-* `bundle install --path gems/`
+* `source env/bin/activate`
+* `virtualenv -p python3 env`
+* `pip install -r requirements.txt`
 
 ## Running ##
-* `bundle exec jekyll serve --port $PORT` where `$PORT` is desired port.
+* `source env/bin/activate`
+* `python3 manage.py runserver $PORT` where `$PORT` is desired port.
 
 ## Editing Data ##
 
-### Officer Information ###
-* Officer information is contained within .json files in the _data/about subdirectory. Changes made in these files will be reflected on the generated website.
-* Each type of officer has a separate .json file, ExComm has `excomm.json`, for example.
+### Member Information ###
+* Member Information is modified in the django admin interface at `/admin`.
 * Sponsors have a -1 year to filter out the graduation year field in the generated website.
 * Officer bios are optional.
 
