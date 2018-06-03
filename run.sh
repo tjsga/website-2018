@@ -6,5 +6,6 @@
 #/web/activities/ghs/public/env/bin/python run.py $PORT
 #export PATH=$PATH:/home/2018wzhang/.gem/ruby/2.3.0/bin;
 #/home/2018wzhang/.gem/ruby/2.3.0/bin/bundler exec jekyll serve --port $PORT
-/web/activities/sga/sgawebsite/manage.py runserver $PORT
+#/web/activities/sga/sgawebsite/manage.py runserver $PORT
+/web/activities/sga/sgawebsite/env/bin/python3 manage.py runserver $PORT
 #/web/activities/ghs/public/env/bin/python /web/activities/ghs/public/ghswebsite/app.py $PORT
