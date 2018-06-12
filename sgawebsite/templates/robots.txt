@@ -1,6 +1,0 @@
-User-agent: Google
-Disallow: /icons
-
-User-agent: *
-Disallow: /img
-Disallow: /icons
