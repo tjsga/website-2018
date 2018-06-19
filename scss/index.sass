@@ -1,0 +1,208 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500'
+
+$font-stack: "Montserrat", "Helvetica", "Arial", sans-serif
+$background-color: #FFF
+$color: #444
+$white: #FFF
+$dim: #AAA
+$primary-color: #4D5389
+$secondary-color: #EBB85B
+$break-small: 640px
+$break-awk: 798px
+$break-large: 1220px
+
+=react($break)
+	@media only screen and (max-width: $break)
+		@content
+
+=vertical-padding($pad)
+	padding-top: $pad
+	padding-bottom: $pad
+
+=horizontal-margin($mar)
+	margin-left: $mar
+	margin-right: $mar
+
+.valign
+	display: flex
+	flex-direction: row
+	align-items: center
+
+body
+	font-family: $font-stack
+	margin: 0px
+	display: flex
+	flex-direction: column
+	color: $color
+
+.navigation
+	width: 100vw
+	height: 118px
+	background-color: $background-color
+	+react($break-small)
+		height: 56px
+	.logo
+		height: 90px
+		margin-right: 50px
+		float: left
+		text-align: left
+		+react($break-awk)
+			margin-right: 10px
+		+react($break-small)
+			display: none
+	.socials
+		display: flex
+		width: auto
+		float: right
+		text-align: right
+		+react($break-awk)
+			display: none
+
+.seperate
+	display: flex
+	justify-content: space-between
+	i
+		margin-left: 10px
+		font-size: 22px
+		color: $dim
+	i:hover
+		color: $color
+nav
+	display: flex
+	float: left
+	text-align: left
+	font-size: 12px
+	flex-wrap: wrap
+	margin: 0px
+	ul
+		list-style-image: none
+		list-style-type: none
+		display: flex
+		flex-direction: row
+		margin: 0px
+		padding: 0px
+		li
+			a
+				padding: 6px
+				text-decoration: none
+				color: $color
+				font-family: $font-stack
+				text-transform: uppercase
+				letter-spacing: 1.2px
+				line-height: 14.4px
+				font-weight: 400
+				+react($break-awk)
+					margin: 2px
+					padding: 0px
+			a:hover
+				color: $secondary-color
+
+	+react($break-small)
+		display: none
+
+.hero-image
+	height: 480px
+	background-color: #AAA
+	overflow: hidden
+	display: flex
+	align-items: flex-end
+	justify-content: center
+	+react($break-small)
+		height: 280px
+	img
+		flex-shrink: 0
+		min-width: 100%
+		min-height: 100%
+		position: relative
+
+.content
+	width: 100vw
+	display: flex
+	flex-wrap: wrap
+	+vertical-padding(43px)
+
+.container
+	width: 1200px
+	+horizontal-margin(calc(50vw - 600px))
+	+react($break-large)
+		width: 100%
+		padding: 15px
+		margin: 0px
+
+.overlay
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	flex-direction: column
+	top: 0
+	left: 0
+	position: absolute
+	min-width: 100vw
+	min-height: 598px
+	+react($break-small)
+		min-height: 336px
+	.title
+		text-align: center
+		font-size: 60px
+		color: $white
+		margin-top: 198px
+		+react($break-small)
+			margin-top: 96px
+
+.row
+	display: flex
+	flex-direction: row
+	+react($break-small)
+		flex-direction: column
+.col
+	display: flex
+	flex: 1 1 0
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	+react($break-small)
+		flex: 1
+
+.segment
+	padding-left: 17px
+	padding-right: 17px
+	
+.segment-title
+	color: $secondary-color
+	font-size: 24px
+	padding-bottom: 17px
+	font-weight: 500
+
+.segment-para
+	color: $color
+	text-align: left
+	font-size: 22px
+	line-height: 33px
+	font-weight: 300
+
+.segment-more-button
+	width: 80px
+	font-size: 11px
+	margin: 0 auto
+	padding-left: 23px
+	padding-right: 23px
+	padding-top: 13px
+	padding-bottom: 13px
+	border-radius: 3px
+	border-width: 2px
+	border-style: solid
+	border-color: $secondary-color
+	color: $secondary-color
+	text-transform: uppercase
+	letter-spacing: 1.2px
+	line-height: 14.4px
+	font-weight: 400
+
+.segment-more-button:hover
+	color: $white
+	background-color: $secondary-color
+	font-weight: 500
+
+.segment-image
+	max-width: 100%
