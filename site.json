@@ -1,0 +1,327 @@
+{
+	"nav": [{
+		"title": "About Us",
+		"url": "#",
+		"submenu": [{
+			"title": "Officers",
+			"url": "/officers"
+		},{
+			"title": "Executive Committee",
+			"url": "/committee"
+		},{
+			"title": "Class Council",
+			"url": "/council"
+		}],
+		"submenu-id": "abu"
+	},{
+		"title": "What We Do",
+		"url": "#",
+		"submenu": [{
+			"title": "Mission and History",
+			"url": "/mission"
+		},{
+			"title": "Constitution",
+			"url": "https://drive.google.com/open?id=1fD2rEFGGV80nNx0v2mBSpPuLhfyYiGK8cz5xE5b4P3M"
+		},{
+			"title": "Meeting Minutes",
+			"url": "/minutes"
+		}],
+		"submenu-id": "wwd"
+	},{ 
+		"title": "News",
+		"url": "/news"
+	},{
+		"title": "Get Involved",
+		"url": "/involved"
+	}],
+	"segments": [{
+		"title": "News and Happenings",
+		"img": "resources/segment-1.jpg",
+		"content": "Read about SGA initiatives, goals, and progress from SGA officers, as well as from other student leaders, students, and student organizations.",
+		"button": {
+			"title": "More Info",
+			"url": "/news"
+		}
+	},{
+		"title": "Who We Are",
+		"img": "resources/segment-2.jpg",
+		"content": "Learn about your representatives, and how they're working to advance the common agenda that SGA has set to improve your experience at TJ.",
+		"button": {
+			"title": "More Info",
+			"url": "/officers"
+		}
+	},{
+		"title": "Get Involved",
+		"img": "resources/segment-3.jpg",
+		"content": "Any questions or concerns? Have an idea for how SGA could be doing more to advocate for students? Want to get involved? Contact Us!",
+		"button": {
+			"title": "More Info",
+			"url": "/involved"
+		}
+	}],
+	"news": [{
+		"id": 0,
+		"title": "Welcome to the new SGA Website",
+		"url": "news/0",
+		"img": "resources/news-1.png",
+		"content": "<p class='big-news-para'>Welcome to the new TJHSST Student Government Association Website, where you can find information encompassing all aspects of the TJSGA! Every year, four new SGA officers are elected: President, Vice President, Secretary, and Treasurer. On the new site you can read a brief background on your student representatives, and find a list of the people serving on the Executive Committee and Class Council. </p><p class='big-news-para'>There is a section for our SGA Mission and Vision Statements as well. These are our goals we hope to accomplish, as representatives of the student body. This section also has a link to a spreadsheet containing a list of SGA’s from previous years for your reference. Along with those, we also provide a link to a google drive folder which includes detailed documents on every SGA or SGA-related meeting and conference during the school year as well as a laid-out agenda of SGA activities.</p><p class='big-news-para'>Do you want to be a part of Student Government; whether it be SGA, ExComm, SAC, or CC?  Do you want to see changes made in our school?  Do you want to help plan awesome TJ events such as Homecoming, Art Gala, and J-Day?  Then apply for student government!  Here you can find basic instructions on how to apply for any position on the Student Leadership team.</p><p class='big-news-para'>At the bottom of every page you will be able to find links to several SGA and school provided resources such as the SGA Constitution and the Student-Run TJ website.</p>",
+		"date": "June 22nd, 2018"
+	}],
+	"quote": {
+		"text": "“We envision a school where the brightest minds can come together to research, create, and explore, stretching beyond the limits of the classroom in expressing diverse cultures, fostering a sense of community, and creating social impact.”",
+		"button": {
+			"title": "Our Mission",
+			"url": "/mission"
+		}
+	},
+	"footer": [{
+		"title": "SGA Documents and Links",
+		"links": [{
+			"title": "SGA Constitution",
+			"url": "https://drive.google.com/open?id=1fD2rEFGGV80nNx0v2mBSpPuLhfyYiGK8cz5xE5b4P3M "
+		},{
+			"title": "Ion",
+			"url": "https://ion.tjhsst.edu/"
+		},{
+			"title": "TJ Peer Tutoring",
+			"url": "https://tutoring.tjhsst.edu/"
+		},{
+			"title": "Student Advocacy Guidelines",
+			"url": "https://ion.tjhsst.edu/uploads/advocacy.pdf"
+		},{
+			"title": "TJ Media",
+			"url": "https://www.tjtoday.org/"
+		},{
+			"title": "College and Career Center",
+			"url": "https://tjhsst.fcps.edu/student-services/college-and-career-center/"
+		}]
+	},{
+		"title": "School Resources",
+		"links": [{
+			"title": "FCPS Student Rights & Responsibilities",
+			"url": "https://www.fcps.edu/sites/default/files/media/forms/SRR1718.pdf"
+		},{
+			"title": "Student-Run TJ Website",
+			"url": "https://pre-fpcs.tjhsst.edu/"
+		},{
+			"title": "TJHSST School Profile",
+			"url": "https://tjhsst.fcps.edu/sites/default/files/media/inline-files/TJHSST%20Profile%202017-18.pdf"
+		},{
+			"title": "TJ PTSA",
+			"url": "https://www.tjptsa.org/"
+		},{
+			"title": "TJ Partnership Fund",
+			"url": "https://www.tjpartnershipfund.org/"
+		},{
+			"title": "Academic Integrity",
+			"url": "https://integrity.tjhsst.edu/"
+		},{
+			"title": "Staff Directory",
+			"url": "https://tjhsst.fcps.edu/staff-directory/"
+		}]
+	},{
+		"paragraphs": [{
+			"para": "Need help? Contact Us at sga.tjhsst@gmail.com"
+		},{
+			"para": "Photography by BJU Architects and Frank Ding"
+		},{
+			"para": "Website Developed by Anubis Watal"
+		},{
+			"para": "© 2018 TJHSST SGA - 6560 Braddock Road, Alexandria, VA 22312."
+		}],
+		"logo-image": "resources/footer-logo.png"
+	}],
+	"socials": [{
+		"title": "twitter",
+		"url": "https://twitter.com/tjsga"
+	},{
+		"title": "facebook",
+		"url": "https://www.facebook.com/tjsga"
+	},{
+		"title": "envelope",
+		"url": "mailto:sga.tjhsst@gmail.com"
+	}],
+	"officers": [{
+		"title": "President",
+		"name": "Neil Kothari",
+		"img": "resources/neil.jpg",
+		"paragraphs": [{
+			"para": "It is an honor to serve as your 2018-19 Student Body President. My overarching goal for SGA is to be responsive to the needs and concerns of the student body through innovative events and common-sense policy reform. I ran because I share your concerns in every aspect of TJ’s student experience, ranging from workload consistency and integrity to mental health and the lack of transparency in administrative decision-making. By designing new initiatives which support students and reviving tradition which brings the Colonial community together, I hope that we can create an environment where every student can make the most of their four years at TJ. Please feel free to contact me via facebook or by emailing me at 2019nkothari@tjhsst.edu. I’d be happy to hear your input on how we can move TJ forward."
+		}]
+	},{
+		"title": "Vice-President",
+		"name": "Ethan Phillips",
+		"img": "resources/ethan.jpg",
+		"paragraphs": [{
+			"para": ""
+		}]
+	},{
+		"title": "Treasurer",
+		"name": "Mia Yang",
+		"img": "resources/mia.jpg",
+		"paragraphs": [{
+			"para": ""
+		}]
+	},{
+		"title": "Secretary",
+		"name": "Jennifer Hernandez",
+		"img": "resources/jennifer.jpg",
+		"paragraphs": [{
+			"para": ""
+		}]
+	}],
+	"committee": [{
+		"title": "Activities Coordinators",
+		"people": [{
+			"name": "Sitara Uppalapati",
+			"year": "19"
+		},{
+			"name": "Michael Huang",
+			"year": "20"
+		},{
+			"name": "Michael Kyrychenko",
+			"year": "20"
+		},{
+			"name": "Rohan Kalra",
+			"year": "20"
+		},{
+			"name": "Neal Bhatnagar",
+			"year": "21"
+		}]
+	},{
+		"title": "Communications Coordinator",
+		"people": [{
+			"name": "Gabby Heller",
+			"year": "20"
+		}]
+	},{
+		"title": "Policy Specialists",
+		"people": [{
+			"name": "Pari Parajuli",
+			"year": "19"
+		},{
+			"name": "Grace Weisman-Fleischer",
+			"year": "20"
+		},{
+			"name": "Sarah Luthra",
+			"year": "20"
+		},{
+			"name": "Tiffany Ji",
+			"year": "21"
+		}]
+	},{
+		"title": "Technology Specialists",
+		"people": [{
+			"name": "Anubis Watal",
+			"year": "19"
+		},{
+			"name": "Varun Gannavarapu",
+			"year": "19"
+		},{
+			"name": "Sophia Cheng",
+			"year": "20"
+		}]
+	}],
+	"council": [{
+		"title": "Class of 2019",
+		"people": [{
+			"name": "Aaraj Vij",
+			"role": "President"
+		},{
+			"name": "MiJin Cho",
+			"role": "Vice-President"
+		},{
+			"name": "Rishin Pandit",
+			"role": "Treasurer"
+		},{
+			"name": "Rishi Shyamala",
+			"role": "Secretary"
+		},{
+			"name": "Laura Gersony",
+			"role": "Senator"
+		},{
+			"name": "Sabria Kazmi",
+			"role": "Senator"
+		},{
+			"name": "Johnathan Huynh",
+			"role": "Historian"
+		}]
+	},{
+		"title": "Class of 2020",
+		"people": [{
+			"name": "Ronith Ranjan",
+			"role": "President"
+		},{
+			"name": "Jessica Chen",
+			"role": "Vice-President"
+		},{
+			"name": "Vicky Yang",
+			"role": "Treasurer"
+		},{
+			"name": "Khushie Matharoo",
+			"role": "Secretary"
+		},{
+			"name": "Beyonce Andrades",
+			"role": "Senator"
+		},{
+			"name": "Megan Dass",
+			"role": "Senator"
+		},{
+			"name": "Jason Pak",
+			"role": "Historian"
+		}]
+	},{
+		"title": "Class of 2021",
+		"people": [{
+			"name": "Jordan Lee",
+			"role": "President"
+		},{
+			"name": "Quentin Lovejoy",
+			"role": "Vice-President"
+		},{
+			"name": "Matthew Hwang",
+			"role": "Treasurer"
+		},{
+			"name": "Udbhav Muthakana",
+			"role": "Secretary"
+		},{
+			"name": "Sean Nguyen",
+			"role": "Senator"
+		},{
+			"name": "Jason Xu",
+			"role": "Senator"
+		},{
+			"name": "James Huang",
+			"role": "Historian"
+		}]
+	},{
+		"title": "FroshComm (Class of 2022)",
+		"people": [{
+			"name": "Melissa Wu"
+		},{
+			"name": "Krushi Suresh"
+		},{
+			"name": "Allison Seo"
+		},{
+			"name": "Caroline Chen"
+		},{
+			"name": "Marina Wang"
+		},{
+			"name": "Anuj Khemka"
+		},{
+			"name": "Shreyas Chennamaraja"
+		},{
+			"name": "Sagar Gupta"
+		}]
+	}],
+	"vision": "We envision a school where the brightest minds can come together to research, create, and explore, stretching beyond the limits of the classroom in expressing diverse cultures, fostering a sense of community, and creating social impact.",
+	"mission": "TJ SGA will advocate for students by proposing policy that improves student experience, working with organizations to provide academic and personal support to students, and organizing innovative events to foster a sense colonial spirit. We want to serve the needs of the student body, and will therefore be transparent and approachable by encouraging the student body to voice their concerns and making SGA documents publicly accessible. Ultimately, we aim to make TJHSST a place where every student has the opportunity and resources to make the most of their four years here.",
+	"button_under_mission": {
+		"title": "Past Leadership",
+		"url": "https://drive.google.com/open?id=1a3RYdqrDi1IPG9BKWQ2xhoX3YCPQKUl_FsRLvIVEMPg"
+	},
+	"meeting_minutes_button": {
+		"title": "Google Drive Folder Link",
+		"url": "https://drive.google.com/open?id=0B7IEunr2_iS7MTcyMDA0NmQtOTFjYy00MWQ2LThiOTItNzg5NmJiZjgxMmIy"
+	}
+}

@@ -6,7 +6,7 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<link rel='stylesheet' type='text/css' href='css/index.css'>
 	<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
-	<title>TJHSST SGA</title>
+	<title>Officers — TJHSST SGA</title>
 </head>
 
 <body>
@@ -24,12 +24,20 @@
 						<ul>
 							{{#each site.nav}}
 								<li>
-									<a href='{{url}}'>{{title}}</a>
+									{{#if (eq title "About Us")}}
+										<a href='{{url}}' class='dark'>{{title}}</a>
+									{{else}}
+										<a href='{{url}}'>{{title}}</a>
+									{{/if}}
 									{{#if submenu}}
 										<div class='submenu'>
 											<ul>
 												{{#each submenu}}
-													<li><a href='{{url}}'>{{title}}</a></li>
+													{{#if (eq title "Officers")}}
+														<li><a href='{{url}}' class='dark'>{{title}}</a></li>
+													{{else}}
+														<li><a href='{{url}}'>{{title}}</a></li>
+													{{/if}}
 												{{/each}}
 											</ul>
 										</div>
@@ -51,19 +59,27 @@
 			{{/if}}
 		</div>
 	</div>
-	
+
 	{{#if site.nav}}
 		<div class='mobile-only mobile-navigation-links'>
 			<ul>
 				{{#each site.nav}}
 					<li {{#if submenu}}id='expand-{{submenu-id}}'{{/if}}>
-						<a href='{{url}}'>{{title}}</a>
+						{{#if (eq title "About Us")}}
+							<a href='{{url}}' class='dark'>{{title}}</a>
+						{{else}}
+							<a href='{{url}}'>{{title}}</a>
+						{{/if}}
 					</li>
 					{{#if submenu}}
 						<div class='mobile-submenu' id='{{submenu-id}}'>
 							<ul>
 								{{#each submenu}}
-									<li><a href='{{url}}'>{{title}}</a></li>
+									{{#if (eq title "Officers")}}
+										<li><a href='{{url}}' class='dark'>{{title}}</a></li>
+									{{else}}
+										<li><a href='{{url}}'>{{title}}</a></li>
+									{{/if}}
 								{{/each}}
 							</ul>
 						</div>
@@ -72,64 +88,34 @@
 			</ul>
 		</div>
 	{{/if}}
-
+	
 	<section class='hero-image'>
 		<img src='resources/hero.png'></img>
 		<div class='overlay'>
-			<p class='title'>TJHSST SGA</p>
+			<p class='title'>OFFICERS</p>
 		</div>
 	</section>
-
-	{{#if site.segments}}
+	{{#if site.officers}}
+		{{#each site.officers}}
 		<section class='content'>
 			<div class='container'>
-				<div class='row'>
-					{{#each site.segments}}
-						<div class='col segment'>
-							<h1 class='segment-title'>{{title}}</h1>
-							<img class='segment-image' src='{{img}}'/>
-							<p class='segment-para'>{{content}}</p>
-							{{#if button}}
-								<a class='segment-more-button' href='{{button.url}}'>{{button.title}}</a>
-							{{/if}}
-						</div>
-					{{/each}}
+				<div class='row user-profile'>
+					<div class='col w33 user-image'>
+						<img src='{{img}}'/>
+					</div>
+					<div class='col w66 user-info'>
+						<p class='title'>{{name}}, <i>{{title}}</i></p>
+						{{#each paragraphs}}
+							<p>{{para}}</p>
+						{{/each}}
+					</div>
 				</div>
 			</div>
 		</section>
-	{{/if}}
-	{{#if site.news}}
-		<hr/>
-		<section class='content news-and-quote'>
-			<div class='container'>
-				<h1 class='segment-title-outer'>Recent News</h1>
-				<div class='row'>
-					{{#if site.news}}
-						<div class='col w w66'>
-							{{#listFirstThree site.news}}
-								<div class='news-block'>
-									<div class='news-img'>
-										<img src='{{img}}'/>
-									</div>
-									<div class='news-content'>
-										<a href='{{url}}' class='news-title'>{{title}}</a>
-										<p class='news-para'>{{#firstSentences content}}{{/firstSentences}}.</p>
-										<a href='{{url}}' class='news-read-more'>Read More →</a>
-										<p class='news-date'>{{date}}</p>
-									</div>
-								</div>
-							{{/listFirstThree}}
-						</div>
-					{{/if}}
-					{{#if site.quote}}
-						<div class='col w w33'>
-							<p class='segment-quote'>{{site.quote.text}}</p>
-							<a class='segment-projects-button' href='{{site.quote.button.url}}'>{{site.quote.button.title}}</a>
-						</div>
-					{{/if}}
-				</div>
-			</div>
-		</section>
+		{{#unless @last}}
+			<hr/>
+		{{/unless}}
+		{{/each}}
 	{{/if}}
 	{{#if site.footer}}
 		<hr/>
