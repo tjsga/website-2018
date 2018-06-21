@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link rel='stylesheet' type='text/css' href='css/index.css'>
+	<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+	<title>Get Involved — TJHSST SGA</title>
+</head>
+
+<body>
+	<div class='navigation valign'>
+		<div class='mobile-only valign mobile-nav'>
+			<a href='#' class='menu' id='expand'><i class='fa fa-bars'></i></a>
+			<a href='/' class='logo-link'><p class='title'>TJHSST SGA</p></a>
+			<a href='#' class='menu'><i class='fa fa-gap'></i></a>
+		</div>
+		<div class='container valign seperate desktop-only'>
+			<div class='valign'>
+				<a href='/'><img class='logo' src='resources/logo.png'/></a>
+				{{#if site.nav}}
+					<nav>
+						<ul>
+							{{#each site.nav}}
+								<li>
+									{{#if (eq title "Get Involved")}}
+										<a href='{{url}}' class='dark'>{{title}}</a>
+									{{else}}
+										<a href='{{url}}'>{{title}}</a>
+									{{/if}}
+									{{#if submenu}}
+										<div class='submenu'>
+											<ul>
+												{{#each submenu}}
+													<a href='{{url}}'>{{title}}</a>
+												{{/each}}
+											</ul>
+										</div>
+									{{/if}}
+								</li>
+							{{/each}}
+						</ul>
+					</nav>
+				{{/if}}
+			</div>
+			{{#if site.socials}}
+			<div class='valign'>
+				<div class='socials'>
+					{{#each site.socials}}
+						<a href='{{url}}'><i class='fa fa-{{title}}'></i></a>
+					{{/each}}
+				</div>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+
+	{{#if site.nav}}
+		<div class='mobile-only mobile-navigation-links'>
+			<ul>
+				{{#each site.nav}}
+					<li {{#if submenu}}id='expand-{{submenu-id}}'{{/if}}>
+						{{#if (eq title "Get Involved")}}
+							<a href='{{url}}' class='dark'>{{title}}</a>
+						{{else}}
+							<a href='{{url}}'>{{title}}</a>
+						{{/if}}
+					</li>
+					{{#if submenu}}
+						<div class='mobile-submenu' id='{{submenu-id}}'>
+							<ul>
+								{{#each submenu}}
+									<li><a href='{{url}}'>{{title}}</a></li>
+								{{/each}}
+							</ul>
+						</div>
+					{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	{{/if}}
+	
+	<section class='hero-image'>
+		<img src='resources/hero.png'></img>
+		<div class='overlay'>
+			<p class='title'>GET INVOLVED</p>
+		</div>
+	</section>
+
+	<section class='content involved'>
+		<div class='container'>
+			<p>Interested in getting involved with SGA? You can run for office, work on a project, or apply to a committee. If you just want to share an idea or concern or get to know your representatives, reach out to us at sga.tjhsst@gmail.com!</p>
+			<p class='colored thicc'>Here are some ways to connect with SGA:</p>
+		</div>
+	</section>
+	<section class='content block'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col w33 block-title'>
+					<p class='colored thicc'>RUN FOR SGA</p>
+				</div>
+				<div class='col w66 block-para'>
+					<p>The SGA Officers are selected through a school-wide election, and serve as a method of communication between the student body and the administration, faculty, and other organizations. They are also responsible for promoting class and school spirit through events and activities and ensuring enough funds are available for the school’s many clubs.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr/>
+	<section class='content block'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col w33 block-title'>
+					<p class='colored thicc'>RUN FOR SAC</p>
+				</div>
+				<div class='col w66 block-para'>
+					<p>The SAC is another school-wide election and is a delegation made up of four delegates, one of which will be appointed as SAC chair by the others in the delegation. SAC delegates are expected to attend mandatory monthly meetings, where they will decide on school issues to pursue, gathering opinions about the issue from the student body and reporting findings back to the SAC, SGA, and TJ community. SAC delegates are also expected to  represent TJ at area and county-wide meetings.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr/>
+	<section class='content block'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col w33 block-title'>
+					<p class='colored thicc'>RUN FOR CLASS COUNCIL</p>
+				</div>
+				<div class='col w66 block-para'>
+					<p>Class Council is representative of each class at TJ, and class officers are elected based on votes from their class. Responsibilities of class officers include attending class meetings, planning and executing activities for their class, and promoting spirit and unity within their class and the school.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr/>
+	<section class='content block'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col w33 block-title'>
+					<p class='colored thicc'>APPLY FOR EXECUTIVE COMMITTEE</p>
+				</div>
+				<div class='col w66 block-para'>
+					<p>Executive Committee members are appointed positions by SGA officers through an application process, and their main role is to assist the SGA officers in any projects, initiatives, or events that they are currently planning. This includes major events such as Homecoming, the Art Gala, and J-Day.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr/>
+	<section class='content block'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col w33 block-title'>
+					<p class='colored thicc'>APPLY FOR FROSHCOMM</p>
+				</div>
+				<div class='col w66 block-para'>
+					<p>FroshComm is the temporary student government for freshmen until the class elections are held. Members are chosen based on application, and they are responsible for planning Homecoming activities for their class, such as selecting the class theme, banner painting, the spirit video, and much more. They must also lead their class during Homecoming spirit week and make sure everyone is engaged in pep rallies.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr/>
+	<section class='content block'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col w33 block-title'>
+					<p class='colored thicc'>JOIN A PROJECT TEAM</p>
+				</div>
+				<div class='col w66 block-para'>
+					<p>Interested in working on one of SGA's projects or initiatives? Please send us an email at sga.tjhsst@gmail.com to get involved!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	{{#if site.footer}}
+		<hr/>
+		<section class='content banner'>
+			<div class='container'>
+				<div class='row'>
+					<img class='banner-img' src='resources/footer-banner.png'/>
+				</div>
+			</div>
+		</section>
+		<hr/>
+		<section class='content'>
+			<div class='container'>
+				<div class='row'>
+					{{#each site.footer}}
+						<div class='col footer-segment'>
+						{{#if title}}
+								<b>{{title}}</b>
+								{{#each links}}
+									<a href='{{url}}'>{{title}}</a>
+								{{/each}}
+						{{else}}
+							<div class='socials'>
+								{{#each ../site.socials}}
+									<a href='{{url}}'><i class='fa fa-{{title}}'></i></a>
+								{{/each}}
+							</div>
+							{{#each paragraphs}}
+								<p>{{para}}</p>
+							{{/each}}
+							<img class='footer-logo' src='{{logo-image}}'/>
+						{{/if}}
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</section>
+	{{/if}}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,664 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500'
+@import 'https://fonts.googleapis.com/css?family=Josefin+Slab:700'
+@import 'https://fonts.googleapis.com/css?family=Arapey:400,600'
+
+$font-stack: "Montserrat", "Helvetica", "Arial", sans-serif
+$background-color: #FFF
+$color: #444
+$white: #FFF
+$off-white: #EEE
+$off--white: #DDD
+$dim: #AAA
+$primary-color: #4D5389
+$secondary-color: #EBB85B
+$break-small: 640px
+$break-awk: 800px
+$break-large: 1220px
+
+=react($break)
+	@media only screen and (max-width: $break)
+		@content
+
+=vertical-padding($pad)
+	padding-top: $pad
+	padding-bottom: $pad
+
+=vertical-margin($pad)
+	margin-top: $pad
+	margin-bottom: $pad
+
+=horizontal-margin($mar)
+	margin-left: $mar
+	margin-right: $mar
+
+=shadow($top, $left, $blur, $color)
+	box-shadow: $top $left $blur $color
+	-moz-box-shadow: $top $left $blur $color
+	-webkit-box-shadow: $top $left $blur $color
+
+.valign
+	display: flex
+	flex-direction: row
+	align-items: center
+
+body
+	font-family: $font-stack
+	margin: 0px
+	display: flex
+	flex-direction: column
+	color: $color
+
+.navigation
+	width: 100vw
+	height: 118px
+	background-color: $background-color
+	z-index: 2
+	+react($break-small)
+		height: 56px
+	.logo
+		height: 90px
+		margin-right: 50px
+		float: left
+		text-align: left
+		+react($break-awk)
+			margin-right: 10px
+		+react($break-small)
+			display: none
+	.socials
+		display: flex
+		width: auto
+		float: right
+		text-align: right
+		+react($break-awk)
+			display: none
+
+.seperate
+	display: flex
+	justify-content: space-between
+	i
+		margin-left: 10px
+		font-size: 22px
+		color: $dim
+	i:hover
+		color: $color
+nav
+	display: flex
+	float: left
+	text-align: left
+	font-size: 12px
+	flex-wrap: wrap
+	margin: 0px
+	ul
+		list-style-image: none
+		list-style-type: none
+		display: flex
+		flex-direction: row
+		margin: 0px
+		padding: 0px
+		li
+			a
+				padding: 6px
+				text-decoration: none
+				color: $color
+				font-family: $font-stack
+				text-transform: uppercase
+				letter-spacing: 1.2px
+				line-height: 14.4px
+				font-weight: 400
+				+react($break-awk)
+					margin: 2px
+					padding: 0px
+		li:hover > a
+			color: $secondary-color
+		li:hover > .submenu
+			display: flex
+
+	+react($break-small)
+		display: none
+
+.submenu
+	display: none
+	float: left
+	text-align: left
+	font-size: 12px
+	flex-wrap: wrap
+	margin: 0px
+	margin-top: 5px
+	position: absolute
+	background-color: $white
+	+shadow(2px, 2px, 10px, #AAA)
+	ul
+		list-style-image: none
+		list-style-type: none
+		display: flex
+		flex-direction: column
+		margin: 0px
+		padding: 5px
+		+vertical-padding(10px)
+		+react($break-awk)
+			+vertical-padding(5px)
+		li
+			+vertical-padding(3px)
+			a
+				padding: 6px
+				text-decoration: none
+				color: $color
+				font-family: $font-stack
+				text-transform: uppercase
+				letter-spacing: 1.2px
+				line-height: 14.4px
+				font-weight: 400
+				+react($break-awk)
+					margin: 2px
+					padding: 0px
+		li:hover > a
+			color: $secondary-color
+	+react($break-small)
+		display: none
+
+.hero-image
+	height: 480px
+	z-index: 1
+	background-color: #AAA
+	overflow: hidden
+	display: flex
+	align-items: flex-end
+	justify-content: center
+	+react($break-small)
+		height: 280px
+	img
+		flex-shrink: 0
+		min-width: 100%
+		min-height: 100%
+		position: relative
+
+.content
+	width: 100vw
+	display: flex
+	flex-wrap: wrap
+	+vertical-padding(43px)
+
+.container
+	width: 1200px
+	+horizontal-margin(calc(50vw - 600px))
+	+react($break-large)
+		width: 100%
+		padding: 15px
+		margin: 0px
+
+hr
+	width: 1200px
+	+horizontal-margin(calc(50vw - 600px))
+	+react($break-large)
+		width: auto
+		+horizontal-margin(15px)
+
+.overlay
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	flex-direction: column
+	top: 118
+	left: 0
+	position: absolute
+	min-width: 100vw
+	min-height: 480px
+	+react($break-small)
+		min-height: 280px
+	.title
+		text-align: center
+		font-size: 60px
+		color: $white
+		margin-top: 80px
+		+react($break-small)
+			margin-top: 40px
+		font-family: "Josefin Slab"
+		font-style: bold
+
+.row
+	display: flex
+	flex-direction: row
+	+react($break-small)
+		flex-direction: column
+.col
+	display: flex
+	flex: 1 1 0
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	+react($break-small)
+		flex: 1
+
+.segment
+	padding-left: 17px
+	padding-right: 17px
+	
+.segment-title
+	color: $secondary-color
+	font-size: 24px
+	padding-bottom: 17px
+	font-weight: 500
+
+.segment-para
+	color: $color
+	text-align: left
+	font-size: 22px
+	line-height: 33px
+	font-weight: 300
+
+.segment-more-button
+	width: 80px
+	font-size: 11px
+	margin: 0 auto
+	padding-left: 23px
+	padding-right: 23px
+	padding-top: 13px
+	padding-bottom: 13px
+	border-radius: 3px
+	border-width: 2px
+	border-style: solid
+	border-color: $secondary-color
+	color: $secondary-color
+	text-transform: uppercase
+	letter-spacing: 1.2px
+	line-height: 14.4px
+	font-weight: 400
+
+.segment-more-button:hover
+	color: $white
+	background-color: $secondary-color
+	font-weight: 500
+
+.segment-image
+	max-width: 100%
+
+.banner-img
+	width: 100%
+	height: 100%
+
+.banner
+	padding-top: 0px
+	margin-top: 15px
+	padding-bottom: 0px
+	margin-bottom: 15px
+	+react($break-small)
+		margin-top: 0px
+		margin-bottom: 0px
+
+.footer-segment
+	display: flex
+	flex-direction: column
+	padding-left: 17px
+	padding-right: 17px
+	justify-content: flex-start
+	align-items: center
+	b
+		font-size: 14px
+		margin-bottom: 24px
+	.socials
+		display: flex
+		width: auto
+		a
+			margin-right: 20px
+			font-size: 28px
+			color: $dim
+			margin-bottom: 17px
+		a:hover
+			color: $color
+		a:last-child
+			margin-right: 0px
+	a
+		text-decoration: none
+		color: $color
+		font-size: 13px
+		margin-bottom: 24px
+	a:hover
+		color: $secondary-color
+	p
+		font-size: 13px
+	.footer-logo
+		width: 100px
+		margin-top: 17px
+	+react($break-small)
+		margin-bottom: 48px
+
+.mobile-only
+	display: none
+	+react($break-small)
+		display: flex
+
+.menu
+	i
+		color: $color
+		font-size: 24px
+
+.mobile-nav
+	flex-direction: row
+	width: 100%
+	justify-content: space-between
+	+horizontal-margin(15px)
+	.title
+		font-size: 24px
+		font-weight: 500
+
+.desktop-only
+	display: flex
+	+react($break-small)
+		display: none
+
+.fa-gap
+	width: 25px
+
+.mobile-navigation-links
+	display: none
+	width: 100vw
+	ul
+		list-style-image: none
+		list-style-type: none
+		display: flex
+		flex-direction: column
+		margin: 0px
+		padding: 0px
+		width: 100vw
+		align-items: center
+		li
+			width: 100vw
+			text-align: center
+			background-color: $off-white
+			+vertical-padding(12px)
+			a
+				text-decoration: none
+				color: $color
+				text-transform: uppercase
+				letter-spacing: 1.2px
+				line-height: 14.4px
+				font-weight: 400
+				+vertical-padding(12px)
+
+		li:hover > a
+			color: $secondary-color
+
+.mobile-submenu
+	display: none
+	ul
+		list-style-image: none
+		list-style-type: none
+		display: flex
+		flex-direction: column
+		margin: 0px
+		padding: 0px
+		width: 100vw
+		align-items: center
+		li
+			width: 100vw
+			text-align: center
+			background-color: $off--white
+			+vertical-padding(8px)
+			a
+				text-decoration: none
+				color: $color
+				text-transform: uppercase
+				letter-spacing: 1.2px
+				line-height: 14.4px
+				font-weight: 400
+				
+.w
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: center
+	text-align: center
+	+react($break-small)
+		flex: 1
+		align-items: flex-start
+		text-align: left
+
+.w66
+	flex: 2
+	margin-right: 17px
+	align-items: flex-start
+
+.w33
+	flex: 1
+	margin-left: 17px
+
+.segment-quote
+	color: $color
+	text-align: left
+	font-size: 28px
+	line-height: 42px
+	font-weight: 300
+	font-style: italic
+	font-family: "Arapey"
+	margin-top: 0px
+
+.segment-projects-button
+	width: auto
+	font-size: 11px
+	margin: 0 auto
+	padding-left: 23px
+	padding-right: 23px
+	padding-top: 13px
+	padding-bottom: 13px
+	border-radius: 3px
+	border-width: 2px
+	border-style: solid
+	border-color: $secondary-color
+	color: $secondary-color
+	text-transform: uppercase
+	letter-spacing: 1.2px
+	line-height: 14.4px
+	font-weight: 400
+
+.segment-projects-button:hover
+	color: $white
+	background-color: $secondary-color
+	font-weight: 500
+
+.segment-title-outer
+	color: $secondary-color
+	font-size: 24px
+	padding-bottom: 17px
+	font-weight: 500
+	+react($break-small)
+		margin-left: 10px
+
+.news-block
+	display: flex
+	flex-direction: row
+	margin-bottom: 20px
+	.news-img
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+		text-align: left
+		width: 25%
+		padding-right: 25px
+		img
+			width: 100%
+	.news-content
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+		text-align: left
+		width: 60%
+		.news-title
+			font-size: 20px
+			color: $dim
+		.news-title:hover
+			color: $secondary-color
+		.news-para
+			font-size: 12px
+			color: $color
+		.news-read-more
+			font-size: 13px
+			color: $dim
+		.news-read-more:hover
+			color: $secondary-color
+		.news-date
+			font-size: 12px
+			color: $dim
+	+react($break-small)
+		margin-left: 10px
+		
+.news-and-quote
+	padding-top: 17px
+	padding-bottom: 32px
+
+.user-image
+	align-items: flex-start
+	justify-content: flex-start
+	margin: 0px
+	img
+		width: 90%
+		+react($break-small)
+			width: 100%
+
+.user-info
+	align-items: flex-start
+	justify-content: flex-start
+	text-align: left
+	p
+		font-weight: 300
+		font-size: 22px
+		line-height: 33px
+		+vertical-margin(12px)
+	.title
+		font-weight: 500
+		font-size: 18px
+		margin: 0px
+		+react($break-small)
+			margin-top: 24px
+
+.committee
+	align-items: flex-start
+	justify-content: flex-start
+	text-align: left
+	.title
+		color: $secondary-color
+		font-size: 22px
+		font-weight: 500
+	p:last-child
+		margin-bottom: 24px
+
+.committee-list
+	padding-bottom: 0px
+	padding-top: 0px
+
+.top-padding
+	padding-top: 17px
+
+.logo-link
+	text-decoration: none
+	color: $color
+
+.dark
+	color: #000 !important
+	font-weight: 500 !important
+
+.big-news-title
+	font-size: 24px
+	color: $secondary-color
+
+.big-news-date
+	font-size: 20px
+	color: $dim
+
+.big-news-para
+	font-size: 22px
+	line-height: 33px
+	color: $color
+	margin-top: 0px
+
+.big-news-read-more
+	font-size: 18px
+	color: $dim
+
+.large-news
+	margin-bottom: 0px
+	+react($break-small)
+		flex-direction: column
+		align-items: center
+		.news-img
+			width: 75%
+		.news-content
+			width: 100%
+
+.middle-quote
+	display: flex
+	flex-direction: column
+
+.quote-text
+	width: 100%
+	text-align: center
+	justify-content: center
+	+react($break-small)
+		text-align: left
+		justify-content: flex-start
+	p
+		font-family: "Arapey"
+		font-style: italic
+		font-weight: 600
+		font-size: 28px
+
+.quote-author
+	width: 100%
+	text-align: right
+	justify-content: flex-end
+	p
+		margin-right: 200px
+		+react($break-awk)
+			margin-right: 0px
+		font-size: 22px
+
+.block-title
+	text-align: left
+	align-items: flex-start
+	justify-content: flex-start
+	p
+		font-size: 21px
+	margin-left: 0px
+	margin-right: 17px
+
+.block-para
+	text-align: left
+	align-items: flex-start
+	justify-content: flex-start
+	p
+		font-size: 22px
+		line-height: 33px
+
+.block
+	+vertical-padding(7px)
+
+.leadership-button-container
+	text-align: cetner
+	align-items: center
+	justify-content: center
+
+.leadership-button
+	width: auto
+	font-size: 14px
+	padding-left: 34px
+	padding-right: 34px
+	padding-top: 21px
+	padding-bottom: 21px
+	border-radius: 3px
+	background-color: $secondary-color
+	color: $white
+	text-transform: uppercase
+	font-weight: 500
+
+.leadership-button:hover
+	opacity: 0.7
+
+.involved
+	font-size: 22px
+	line-height: 33px
+
+.colored
+	color: $secondary-color
+
+.thicc
+	font-weight: 500
