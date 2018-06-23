@@ -100,7 +100,7 @@ nav ul li a {
   }
 }
 nav ul li:hover > a {
-  color: #EBB85B;
+  color: #38A3BD;
 }
 nav ul li:hover > .submenu {
   display: flex;
@@ -162,7 +162,7 @@ nav ul li:hover > .submenu {
   }
 }
 .submenu ul li:hover > a {
-  color: #EBB85B;
+  color: #38A3BD;
 }
 @media only screen and (max-width: 640px) {
   .submenu {
@@ -285,7 +285,7 @@ hr {
 }
 
 .segment-title {
-  color: #EBB85B;
+  color: #38A3BD;
   font-size: 24px;
   padding-bottom: 17px;
   font-weight: 500;
@@ -310,8 +310,8 @@ hr {
   border-radius: 3px;
   border-width: 2px;
   border-style: solid;
-  border-color: #EBB85B;
-  color: #EBB85B;
+  border-color: #38A3BD;
+  color: #38A3BD;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   line-height: 14.4px;
@@ -320,7 +320,7 @@ hr {
 
 .segment-more-button:hover {
   color: #FFF;
-  background-color: #EBB85B;
+  background-color: #38A3BD;
   font-weight: 500;
 }
 
@@ -381,7 +381,7 @@ hr {
   margin-bottom: 24px;
 }
 .footer-segment a:hover {
-  color: #EBB85B;
+  color: #38A3BD;
 }
 .footer-segment p {
   font-size: 13px;
@@ -467,7 +467,7 @@ hr {
   padding-bottom: 12px;
 }
 .mobile-navigation-links ul li:hover > a {
-  color: #EBB85B;
+  color: #38A3BD;
 }
 
 .mobile-submenu {
@@ -547,8 +547,8 @@ hr {
   border-radius: 3px;
   border-width: 2px;
   border-style: solid;
-  border-color: #EBB85B;
-  color: #EBB85B;
+  border-color: #38A3BD;
+  color: #38A3BD;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   line-height: 14.4px;
@@ -557,12 +557,12 @@ hr {
 
 .segment-projects-button:hover {
   color: #FFF;
-  background-color: #EBB85B;
+  background-color: #38A3BD;
   font-weight: 500;
 }
 
 .segment-title-outer {
-  color: #EBB85B;
+  color: #38A3BD;
   font-size: 24px;
   padding-bottom: 17px;
   font-weight: 500;
@@ -601,7 +601,7 @@ hr {
   color: #AAA;
 }
 .news-block .news-content .news-title:hover {
-  color: #EBB85B;
+  color: #38A3BD;
 }
 .news-block .news-content .news-para {
   font-size: 12px;
@@ -612,7 +612,7 @@ hr {
   color: #AAA;
 }
 .news-block .news-content .news-read-more:hover {
-  color: #EBB85B;
+  color: #38A3BD;
 }
 .news-block .news-content .news-date {
   font-size: 12px;
@@ -672,7 +672,7 @@ hr {
   text-align: left;
 }
 .committee .title {
-  color: #EBB85B;
+  color: #38A3BD;
   font-size: 22px;
   font-weight: 500;
 }
@@ -701,7 +701,7 @@ hr {
 
 .big-news-title {
   font-size: 24px;
-  color: #EBB85B;
+  color: #38A3BD;
 }
 
 .big-news-date {
@@ -815,7 +815,7 @@ hr {
   padding-top: 21px;
   padding-bottom: 21px;
   border-radius: 3px;
-  background-color: #EBB85B;
+  background-color: #38A3BD;
   color: #FFF;
   text-transform: uppercase;
   font-weight: 500;
@@ -831,7 +831,7 @@ hr {
 }
 
 .colored {
-  color: #EBB85B;
+  color: #38A3BD;
 }
 
 .thicc {
