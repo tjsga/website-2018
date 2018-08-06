@@ -108,7 +108,11 @@
 							<img src='{{img}}'/>
 						</div>
 						<div class='news-content'>
-							<p class='big-news-para'>{{#first3Sentences content}}{{/first3Sentences}}.</p>
+							{{#each content}}
+								{{#if (eq @index 0)}}
+									<p class='big-news-para'>{{para}}</p>
+								{{/if}}
+							{{/each}}
 							<a href='{{url}}' class='big-news-read-more'>Read More →</a>
 						</div>
 					</div>
