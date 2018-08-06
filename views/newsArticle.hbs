@@ -104,7 +104,9 @@
 				<a href='https://sga.tjhsst.edu/{{url}}' class='big-news-title'>{{title}}</a>
 				<p class='big-news-date'>{{date}}</p>
 				<div class='news-content'>
-					{{{content}}}
+					{{#each content}}
+						<p class='big-news-para'>{{para}}</p>
+					{{/each}}
 				</div>
 			</div>
 		</section>
