@@ -20,7 +20,7 @@ hbs.registerHelper('listFirstThree', function (context, options) {
 	return ret
 })
 hbs.registerHelper('firstSentences', function (context) { 
-	return context.toString().split('.').slice(0, 1).join('.')
+	return context[0].para.toString()
 })
 hbs.registerHelper('first3Sentences', function (context) { 
 	return context.toString().split('.').slice(0, 3).join('.')
