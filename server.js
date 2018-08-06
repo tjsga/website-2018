@@ -60,10 +60,10 @@ app.get('/minutes', function (req, res) {
 	res.render('minutes', { site: content })
 })
 
-// app.get('/projects', function (req, res) {
-// 	var content = JSON.parse(fs.readFileSync('site.json'))
-// 	res.render('projects', { site: content })
-// })
+app.get('/projects', function (req, res) {
+	var content = JSON.parse(fs.readFileSync('site.json'))
+	res.render('projects', { site: content })
+})
 
 app.get('/news', function (req, res) {
 	var content = JSON.parse(fs.readFileSync('site.json'))

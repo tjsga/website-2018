@@ -97,7 +97,25 @@
 			<p class='title'>PROJECTS</p>
 		</div>
 	</section>
-	
+	<section class='content block'></section>
+	{{#each site.projects}}
+		{{#unless (eq @index 0)}}
+			<hr/>
+		{{/unless}}
+		<section class='content block'>
+			<div class='container'>
+				<div class='row'>
+					<div class='col w33 block-title'>
+						<p class='colored thicc'>{{title}}</p>
+					</div>
+					<div class='col w66 block-para'>
+						<p>{{info}}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	{{/each}}
+
 	{{#if site.footer}}
 		<hr/>
 		<section class='content banner'>
