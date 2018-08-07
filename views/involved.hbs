@@ -181,6 +181,18 @@
 			</div>
 		</div>
 	</section>
+	{{#if site.contact_us_button}}
+		<hr/>
+		<section class='content block'>
+			<div class='container'>
+				<div class='row'>
+					<div class='col leadership-button-container maxi-padding'>
+						<a class='leadership-button' href='{{site.contact_us_button.url}}'>{{site.contact_us_button.title}}</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	{{/if}}
 	{{#if site.footer}}
 		<hr/>
 		<section class='content banner'>
