@@ -72,7 +72,9 @@
 		},{
 			"para": "There is a section for our SGA Mission and Vision Statements as well. These are our goals we hope to accomplish, as representatives of the student body. This section also has a link to a spreadsheet containing a list of SGA’s from previous years for your reference. Along with those, we also provide a link to a google drive folder which includes detailed documents on every SGA or SGA-related meeting and conference during the school year as well as a laid-out agenda of SGA activities."
 		},{
-			"para": "Do you want to be a part of Student Government; whether it be SGA, ExComm, SAC, or CC?  Do you want to see changes made in our school?  Do you want to help plan awesome TJ events such as Homecoming, Art Gala, and J-Day?  Then apply for student government!  Here you can find basic instructions on how to apply for any position on the Student Leadership team.</p><p class='big-news-para'>At the bottom of every page you will be able to find links to several SGA and school provided resources such as the SGA Constitution and the Student-Run TJ website."
+			"para": "Do you want to be a part of Student Government; whether it be SGA, ExComm, SAC, or CC?  Do you want to see changes made in our school?  Do you want to help plan awesome TJ events such as Homecoming, Art Gala, and J-Day?  Then apply for student government!  Here you can find basic instructions on how to apply for any position on the Student Leadership team."
+		},{
+			"para": "At the bottom of every page you will be able to find links to several SGA and school provided resources such as the SGA Constitution and the Student-Run TJ website."
 		}],
 		"date": "August 6th, 2018"
 	}],
@@ -345,5 +347,9 @@
 		"title": "Big Sibs",
 		"info": "Big Sibs pairs rising sophomores, juniors, and seniors with incoming freshman as mentors and mentees. The goal of the program is to alleviate any fears rising freshmen may have as they enter the TJ community by providing a mentor who has gone through the same experience. By ensuring that every student has someone to talk to who can answer their questions and provide emotional and academic support, Big Sibs hopes to move toward a stress and worry-free TJ environment.",
 		"photo": "https://www.tjtoday.org/wp-content/uploads/2016/03/9027341e5a68c45de0d230da23ea716d.jpeg"
-	}]
+	}],
+	"contact_us_button": {
+		"title": "Contact Us",
+		"url": "https://goo.gl/forms/F3FXer4xpAF5SDhL2"
+	}
 }
