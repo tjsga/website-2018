@@ -1,8 +1,11 @@
+const EDITINGPASSWORD = '#420dglazeit'
+
 // MODULES
 var express = require('express')
 var path = require('path')
 var hbs = require('hbs')
 var fs = require('fs')
+var bodyParser = require("body-parser")
 
 // SERVER INIT
 var app = express()
@@ -11,6 +14,10 @@ var server =  require('http').createServer(app)
 // SERVER CONFIG
 app.set('trust proxy', 1)
 app.set('view engine', 'hbs')
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
 hbs.registerPartials(path.join(__dirname, 'views'))
 hbs.registerHelper('listFirstThree', function (context, options) {
 	var ret = ""
@@ -35,6 +42,25 @@ app.use('/css', express.static(path.join(__dirname, 'css')))
 app.use('/resources', express.static(path.join(__dirname, 'resources')))
 
 // PAGES
+app.get('/edit', function (req, res) {
+	var content = JSON.parse(fs.readFileSync('site.json'))
+	res.render('edit', { officers: JSON.stringify(content.officers), committee: JSON.stringify(content.committee), council: JSON.stringify(content.council) })
+})
+
+app.post('/edit', function (req, res) {
+	var data = JSON.parse(req.body.data)
+	if (data.password === EDITINGPASSWORD) {
+		var content = JSON.parse(fs.readFileSync('site.json'))
+		content.officers = data.officers
+		content.committee = data.committee
+		content.council = data.council
+		fs.writeFileSync('site.json', JSON.stringify(content))
+		res.send({ status: 'editsSaved' })
+	} else {
+		res.send({ status: 'incorrectPassword' })
+	}
+})
+
 app.get('/officers', function (req, res) {
 	var content = JSON.parse(fs.readFileSync('site.json'))
 	res.render('officers', { site: content })
