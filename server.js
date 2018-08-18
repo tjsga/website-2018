@@ -44,7 +44,7 @@ app.use('/resources', express.static(path.join(__dirname, 'resources')))
 // PAGES
 app.get('/edit', function (req, res) {
 	var content = JSON.parse(fs.readFileSync('site.json'))
-	res.render('edit', { officers: JSON.stringify(content.officers), committee: JSON.stringify(content.committee), council: JSON.stringify(content.council) })
+	res.render('edit', { officers: JSON.stringify(content.officers), committee: JSON.stringify(content.committee), council: JSON.stringify(content.council), news: JSON.stringify(content.news) })
 })
 
 app.post('/edit', function (req, res) {
@@ -54,6 +54,7 @@ app.post('/edit', function (req, res) {
 		content.officers = data.officers
 		content.committee = data.committee
 		content.council = data.council
+		content.news = data.news
 		fs.writeFileSync('site.json', JSON.stringify(content))
 		res.send({ status: 'editsSaved' })
 	} else {

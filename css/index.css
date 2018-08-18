@@ -829,6 +829,9 @@ hr {
   font-size: 22px;
   line-height: 33px;
 }
+.involved .calTitle {
+  font-size: 28px;
+}
 
 .colored {
   color: #38A3BD;
