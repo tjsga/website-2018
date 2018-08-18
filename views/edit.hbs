@@ -198,6 +198,17 @@
 			margin: 0px;
 			position: absolute;
 		}
+		.longer {
+			width: 500px;
+		}
+		.shorter {
+			width: 50px;
+			min-width: 50px;
+		}
+		.smaller {
+			width: 700px;
+			height: 200px;
+		}
 	</style>
 	<title>SGA Website Editor</title>
 	<link rel='icon' href='https://i.imgur.com/IRJiPeO.png'>
@@ -242,12 +253,29 @@
 		</div>
 		<a class='btn title' @click='council.push({"people": []})'>Add Council</a>
 		<hr/>
+		<b>News</b>
+		<div v-for='(nart, k) in news'>
+			<input v-model='nart.date' placeholder='Date'/>
+			<input v-model='nart.title' placeholder='Title' class='longer'/>
+			<input v-model='nart.img' placeholder='Image URL'/>
+			<input v-model='nart.id' placeholder='ID' class='shorter'/>
+			<input v-model='nart.url' placeholder='URL: Format is news/"id"'/>
+			<div v-for='(para, l) in nart.content'>
+				<textarea v-model='para.para' placeholder='Paragraph' class='smaller'></textarea>
+				<a class='btn red' @click='nart.content.splice(l, 1)'><i class='fas fa-times'></i></a>
+			</div>
+			<a class='btn' @click='nart.content.push({"para": ""})'>Add Paragraph</a>
+			<a class='btn title red' @click='news.splice(k, 1)'>Remove News Article w/ ID: \{{nart.id}}</a>
+		</div>
+		<a class='btn title' @click='news.unshift({"content": [{"para":""}]})'>Add News Article (at top of news section)</a>
+		<hr/>
 		<input v-model='password' placeholder='Password' id='password' @keyup.enter='sendEdits' type='password'/>
 		<a class='btn' @click='sendEdits'>SAVE EDITS</a>
 	</div>
 	<p class='hidden' id='officers'>{{officers}}</p>
 	<p class='hidden' id='committee'>{{committee}}</p>
 	<p class='hidden' id='council'>{{council}}</p>
+	<p class='hidden' id='news'>{{news}}</p>
 </body>
 <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
 <script src='https://cdn.jsdelivr.net/npm/vue'></script>
@@ -256,6 +284,7 @@
 		officers: JSON.parse($('#officers').text()),
 		committee: JSON.parse($('#committee').text()),
 		council: JSON.parse($('#council').text()),
+		news: JSON.parse($('#news').text()),
 		password: ''
 	}
 	var app = new Vue({
