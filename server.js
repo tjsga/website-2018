@@ -36,12 +36,78 @@ hbs.registerHelper('eq', function (v1, v2) {
 	return v1 == v2
 })
 
+function sendReminderEmailsForHoco(judges) {
+	judges.forEach((e) => {
+		var send = require('gmail-send')({
+			user: 'sga.tjhsst@gmail.com',
+			pass: '#dglazeit',
+			to: e.email,
+			subject: 'Homecoming Judging Reminder',
+			text: 'Hello ' + e.firstName + ' ' + e.lastName + ', \nYou registered to judge a variety of events for Homecoming 2018.\nPlease go to https://sga.tjhsst.edu/judging2018 to complete judging.\nYour password is ' + e.password,
+		})
+		send({}, function (err, res) {})
+	})
+}
+
 // CLIENT CONFIG
 app.use('/js', express.static(path.join(__dirname, 'js')))
 app.use('/css', express.static(path.join(__dirname, 'css')))
 app.use('/resources', express.static(path.join(__dirname, 'resources')))
 
 // PAGES
+app.post('/remindJudges', function(req, res) {
+	sendReminderEmailsForHoco(JSON.parse(fs.readFileSync('hoco.json')).judges)
+	res.send('reminded???')
+})
+
+app.get('/remindJudges', function(req, res) {
+	res.render('remindActivator', {})
+})
+
+app.post('/judgeSignup', function (req, res) {
+	var data = JSON.parse(req.body.data)
+	var content = JSON.parse(fs.readFileSync('hoco.json'))
+	data.password = (Math.floor(Math.random() * 900000) + 100000)
+	content.judges.push(data)
+	fs.writeFileSync('hoco.json', JSON.stringify(content))
+	res.send({ status: 'Registered' })
+})
+
+app.post('/judging2018', function (req, res) {
+	var hoco = JSON.parse(fs.readFileSync('hoco.json'))
+	var data = JSON.parse(req.body.data)
+	console.log(data)
+	var good = false
+	hoco.judges.forEach((e, i) => {
+		console.log(e.password, data.password)
+		if(e.email === data.judge.email && e.password == data.password) {
+			hoco.judges[i].scores = data.scores
+			fs.writeFileSync('hoco.json', JSON.stringify(hoco))
+			good = true
+		}
+	})
+	if (good) {
+		res.send({ 'status': 'successful' })
+	} else {
+		res.send({ 'status': 'unsuccessful' })
+	}
+})
+
+app.get('/judging2018', function (req, res) {
+	var content = JSON.parse(fs.readFileSync('site.json'))
+	var hoco = JSON.parse(fs.readFileSync('hoco.json'))
+	hoco.judges.forEach((e, i) => {
+		hoco.judges[i].password = 0
+	})
+	hoco.string = JSON.stringify(hoco)
+	res.render('hoco', { site: content, hoco: hoco })
+})
+
+app.get('/hoco2018', function (req, res) {
+	var content = JSON.parse(fs.readFileSync('site.json'))
+	res.render('hoco', { site: content })
+})
+
 app.get('/edit', function (req, res) {
 	var content = JSON.parse(fs.readFileSync('site.json'))
 	res.render('edit', { officers: JSON.stringify(content.officers), committee: JSON.stringify(content.committee), council: JSON.stringify(content.council), news: JSON.stringify(content.news) })
