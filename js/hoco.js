@@ -2,7 +2,6 @@ var submitting = false
 
 function validateEmail(email) {
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@fcps\.edu/;
-	re = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 	return re.test(email);
 }
 
