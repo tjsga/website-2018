@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Thomas Jefferson High School Student Government Website">
+	<meta name="keywords" content="TJHSST, TJ SGA, TJHSST SGA, TJ Student Council, TJ Student Government, Thomas Jefferson High School Student Government">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="theme-color" content="#ffffff">
+	<meta NAME="geo.position" CONTENT="38.832037; -77.107725">
+	<meta NAME="geo.placename" CONTENT="TJHSST">
+	<meta NAME="geo.region" CONTENT="US">
+	<link rel='stylesheet' type='text/css' href='css/index.css'>
+	<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+	<link rel='icon' href='https://i.imgur.com/IRJiPeO.png'>
+	<title>{{#unless hoco}}Homecoming{{/unless}}{{#if hoco}}Judging{{/if}} — TJHSST SGA</title>
+	<style>
+		@keyframes shake {
+			10%, 90% {
+			-moz-transform: translateX(-1%);
+			-o-transform: translateX(-1%);
+			-ms-transform: translateX(-1%);
+			-webkit-transform: translateX(-1%);
+			transform: translateX(-1%); }
+			20%, 80% {
+			-moz-transform: translateX(2%);
+			-o-transform: translateX(2%);
+			-ms-transform: translateX(2%);
+			-webkit-transform: translateX(2%);
+			transform: translateX(2%); }
+			30%, 50%, 70% {
+			-moz-transform: translateX(-4%);
+			-o-transform: translateX(-4%);
+			-ms-transform: translateX(-4%);
+			-webkit-transform: translateX(-4%);
+			transform: translateX(-4%); }
+			40%, 60% {
+			-moz-transform: translateX(4%);
+			-o-transform: translateX(4%);
+			-ms-transform: translateX(4%);
+			-webkit-transform: translateX(4%);
+			transform: translateX(4%); } 
+		}
+		.formRow {
+			flex-direction: column;
+			align-items: center;
+		}
+		.hInput {
+			outline: none;
+			text-decoration: none;
+			border: none;
+			font-size: 20px;
+			margin: 10px 0px;
+			padding: 10px 20px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+			-webkit-background-clip: padding-box;
+			-moz-background-clip: padding;
+			background-clip: padding-box;
+			display: inline-block;
+			-webkit-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+			-moz-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+			box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+			-moz-transition: all 0.15s ease;
+			-o-transition: all 0.15s ease;
+			-webkit-transition: all 0.15s ease;
+			transition: all 0.15s ease;
+			min-width: 300px;
+		}
+		#submitButton {
+			outline: none;
+			cursor: pointer;
+			text-align: center;
+			text-decoration: none;
+			font-size: 20px;
+			padding: 10px 20px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+			-webkit-background-clip: padding-box;
+			-moz-background-clip: padding;
+			background-clip: padding-box;
+			display: inline-block;
+			-webkit-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+			-moz-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+			box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+			-moz-transform: scale(1, 1);
+			-o-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			-webkit-transform: scale(1, 1);
+			transform: scale(1, 1);
+			-moz-transition: all 0.15s ease;
+			-o-transition: all 0.15s ease;
+			-webkit-transition: all 0.15s ease;
+			transition: all 0.15s ease;
+			background-color: #53CB8B;
+			color: #F7F7FA;
+			margin: 10px 0px;
+		}
+		#submitButton:hover {
+			-webkit-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			-moz-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			-moz-transform: scale(1.02, 1.02);
+			-o-transform: scale(1.02, 1.02);
+			-ms-transform: scale(1.02, 1.02);
+			-webkit-transform: scale(1.02, 1.02);
+			transform: scale(1.02, 1.02);
+			background-color: #67d198;
+		}
+		#submitButton:focus {
+			-webkit-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			-moz-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			-moz-transform: scale(1.02, 1.02);
+			-o-transform: scale(1.02, 1.02);
+			-ms-transform: scale(1.02, 1.02);
+			-webkit-transform: scale(1.02, 1.02);
+			transform: scale(1.02, 1.02); 
+		}
+		.formTitle {
+			font-size: 24px;
+		}
+		input:hover {
+			-webkit-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			-moz-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			-moz-transform: scale(1.02, 1.02);
+			-o-transform: scale(1.02, 1.02);
+			-ms-transform: scale(1.02, 1.02);
+			-webkit-transform: scale(1.02, 1.02);
+			transform: scale(1.02, 1.02); 
+		}
+		input:focus {
+			-webkit-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			-moz-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+			-moz-transform: scale(1.02, 1.02);
+			-o-transform: scale(1.02, 1.02);
+			-ms-transform: scale(1.02, 1.02);
+			-webkit-transform: scale(1.02, 1.02);
+			transform: scale(1.02, 1.02); 
+		}
+		.invis {
+			display: none;
+			opacity: 0;
+		}
+		.checkBox {
+			justify-content: space-between;
+			display: flex;
+			width: 250px;
+			margin: 10px 5px;
+		}
+		.error {
+			animation-name: shake;
+			-webkit-animation-name: shake;
+			animation-duration: 1s;
+			-webkit-animation-duration: 1s;
+			animation-timing-function: ease;
+			-webkit-animation-timing-function: ease;
+			visibility: visible !important;
+			background-color: #E9676F !important;
+		}
+		p {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 330px;
+		}
+		.eventTitle {
+			font-size: 18px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class='navigation valign'>
+		<div class='mobile-only valign mobile-nav'>
+			<a href='#' class='menu' id='expand'><i class='fa fa-bars'></i></a>
+			<a href='/' class='logo-link'><p class='title'>TJHSST SGA</p></a>
+			<a href='#' class='menu'><i class='fa fa-gap'></i></a>
+		</div>
+		<div class='container valign seperate desktop-only'>
+			<div class='valign'>
+				<a href='/'><img class='logo' src='resources/logo.png'/></a>
+				{{#if site.nav}}
+					<nav>
+						<ul>
+							{{#each site.nav}}
+								<li>
+									<a href='{{url}}'>{{title}}</a>
+									{{#if submenu}}
+										<div class='submenu'>
+											<ul>
+												{{#each submenu}}
+													<li><a href='{{url}}'>{{title}}</a></li>
+												{{/each}}
+											</ul>
+										</div>
+									{{/if}}
+								</li>
+							{{/each}}
+						</ul>
+					</nav>
+				{{/if}}
+			</div>
+			{{#if site.socials}}
+			<div class='valign'>
+				<div class='socials'>
+					{{#each site.socials}}
+						<a href='{{url}}'><i class='fa fa-{{title}}'></i></a>
+					{{/each}}
+				</div>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+
+	{{#if site.nav}}
+		<div class='mobile-only mobile-navigation-links'>
+			<ul>
+				{{#each site.nav}}
+					<li {{#if submenu}}id='expand-{{submenu-id}}'{{/if}}>
+						<a href='{{url}}'>{{title}}</a>
+					</li>
+					{{#if submenu}}
+						<div class='mobile-submenu' id='{{submenu-id}}'>
+							<ul>
+								{{#each submenu}}
+									<li><a href='{{url}}'>{{title}}</a></li>
+								{{/each}}
+							</ul>
+						</div>
+					{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	{{/if}}
+	
+	<section class='hero-image'>
+		<img src='resources/hero.png'></img>
+		<div class='overlay'>
+			<p class='title'>{{#unless hoco}}Homecoming{{/unless}}{{#if hoco}}JUDGING{{/if}}</p>
+		</div>
+	</section>
+	{{#unless hoco}}
+		<section class='content'>
+			<div class='container'>
+				<p class='thicc colored formTitle'>Judge Signup<p>
+				<p class='invis' id='success'>You have successfully registered!</p>
+				<div class='row formRow'>
+					<input class='hInput' id='fname' placeholder='First Name'/>
+					<input class='hInput' id='lname' placeholder='Last Name'/>
+					<input class='hInput' id='email' placeholder='Email (@fcps.edu Only)'/>
+					<div class='checkBox'>
+						<label for='spiritVid'>Spirit Video</label>
+						<input type="checkbox" id='spiritVid' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='pepRally1'>Pep Rally #1</label>
+						<input type="checkbox" id='pepRally1' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='pepRally2'>Pep Rally #2</label>
+						<input type="checkbox" id='pepRally2' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='spiritBanner'>Spirit Banner</label>
+						<input type="checkbox" id='spiritBanner' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='cannedFood'>Canned Food Banner</label>
+						<input type="checkbox" id='cannedFood' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='pepRally3'>Pep Rally #3</label>
+						<input type="checkbox" id='pepRally3' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='pepRally4'>Pep Rally #4</label>
+						<input type="checkbox" id='pepRally4' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='tshirtJ'>T-Shirt Judging</label>
+						<input type="checkbox" id='tshirtJ' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='pepRally5'>Pep Rally #5</label>
+						<input type="checkbox" id='pepRally5' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='pepRally6'>Pep Rally #6</label>
+						<input type="checkbox" id='pepRally6' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='mexJ'>MEX</label>
+						<input type="checkbox" id='mexJ' name='judge'/>
+					</div>
+					<div class='checkBox'>
+						<label for='floatJ'>Float</label>
+						<input type="checkbox" id='floatJ' name='judge'/>
+					</div>
+					<a id='submitButton'>Submit</a>
+					<p class='invis' id='loader'>Submitting....</p>
+				</div>
+			</div>
+		</section>
+	{{/unless}}
+	{{#if hoco}}
+		<section class='content'>
+			<div class='container'>
+				<p class='thicc colored formTitle'>Judging<p>
+				<p class='invis' id='success'>You have successfully judged the events!</p>
+				<p class='invis' id='dataStr'>{{hoco.string}}</p>
+				<div class='row formRow' id='hideAfterSuccess'>
+					<select id='judges' class='hInput'>
+						{{#each hoco.judges}}
+							<option value='{{email}}'>{{firstName}} {{lastName}}</option>
+						{{/each}}
+					</select>
+					<div id='rankings'></div>
+					<input class='hInput' placeholder='Password' type='password' id='passJ'/>
+					<a id='submitButton'>Submit</a>
+					<p class='invis' id='loader'>Submitting....</p>
+				</div>
+			</div>
+		</section>
+	{{/if}}
+	{{#if site.footer}}
+		<hr/>
+		<section class='content banner'>
+			<div class='container'>
+				<div class='row'>
+					<img class='banner-img' src='resources/footer-banner.png'/>
+				</div>
+			</div>
+		</section>
+		<hr/>
+		<section class='content'>
+			<div class='container'>
+				<div class='row'>
+					{{#each site.footer}}
+						<div class='col footer-segment'>
+						{{#if title}}
+								<b>{{title}}</b>
+								{{#each links}}
+									<a href='{{url}}'>{{title}}</a>
+								{{/each}}
+						{{else}}
+							<div class='socials'>
+								{{#each ../site.socials}}
+									<a href='{{url}}'><i class='fa fa-{{title}}'></i></a>
+								{{/each}}
+							</div>
+							{{#each paragraphs}}
+								<p>{{para}}</p>
+							{{/each}}
+							<img class='footer-logo' src='{{logo-image}}'/>
+						{{/if}}
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</section>
+	{{/if}}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.4.2/cleave.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.4.2/addons/cleave-phone.us.js'></script>
+	<script src="js/index.js"></script>
+	{{#unless hoco}}<script src="js/hoco.js"></script>{{/unless}}
+	{{#if hoco}}
+	<script>
+		var submitting = false
+		var validated = true
+		var eventScores = []
+		var hoco = JSON.parse($('#dataStr').text())
+		var events = ['cannedFood','floatJ','mexJ','pepRally1','pepRally2','pepRally3','pepRally4','pepRally5','pepRally6','spiritBanner','spiritVid','tshirtJ']
+		var eventsName = ['Canned Food','Float','MEX','Pep Rally #1','Pep Rally #2','Pep Rally #3','Pep Rally #4','Pep Rally #5','Pep Rally #6','Spirit Banner','Spirit Video','T-Shirt']
+		var jq = {}
+		function updateEvents(judge) {
+			jq = {}
+			hoco.judges.forEach((e) => {
+				if (e.email === judge) {
+					jq = e
+				}
+			});
+			events.forEach((e, i) => {
+				if(jq[e]) {
+					if (e.includes('pepRally')) {
+						$('#rankings').append('<div><p class="eventTitle colored">' + eventsName[i] + '</p><p>#1<select id="' + e + 'num1' + '"><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option></select></p><p>#2<select id="' + e + 'num2' + '"><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option></select></p></div>')
+					} else {
+						$('#rankings').append('<div><p class="eventTitle colored">' + eventsName[i] + '</p><p>#1<select id="' + e + 'num1' + '"><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option></select></p><p>#2<select id="' + e + 'num2' + '"><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option></select></p><p>#3<select id="' + e + 'num3' + '"><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option></select></p><p>#4<select id="' + e + 'num4' + '"><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option></select></p></div>')
+					}
+				}
+			})
+		};
+		var judgeName = $('#judges').val()
+		updateEvents(judgeName)
+		$('#judges').change(function() {
+			judgeName = $('#judges').val()
+			updateEvents(judgeName)
+		});
+		$('#submitButton').click(function(e) {
+			validated = true
+			events.forEach((e, i) => {
+				eventScores.push({})
+				eventScores[i].num1 =  $('#' + e + 'num1').val()
+				eventScores[i].num2 =  $('#' + e + 'num2').val()
+				eventScores[i].num3 =  $('#' + e + 'num3').val()
+				eventScores[i].num4 =  $('#' + e + 'num4').val()
+				if (eventScores[i].num1 === eventScores[i].num2 || eventScores[i].num2 === eventScores[i].num3 || eventScores[i].num3 === eventScores[i].num4 || eventScores[i].num1 === eventScores[i].num3 || eventScores[i].num2 === eventScores[i].num4 || eventScores[i].num1 === eventScores[i].num4) {
+					if (!(eventScores[i].num1 === undefined || (eventScores[i].num1 !== undefined && eventScores[i].num3 === undefined && eventScores[i].num1 !== eventScores[i].num2))) {
+						validated = false
+					}
+				}
+			})
+			if ($('#passJ').val() === '') {
+				validated = false
+			}
+			if (validated && !submitting) {
+				$('#loader').removeClass('invis')
+				submitting = true
+				$.post('/judging2018', { 'data': JSON.stringify({ 'judge': jq, 'password': $('#passJ').val(), 'scores': JSON.stringify(eventScores) }) }, function(resp) {
+					$('#loader').addClass('invis')
+					submitting = false
+					if (resp.status == 'successful') {
+						$('#success').removeClass('invis')
+						$('#hideAfterSuccess').addClass('invis')
+					} else {
+						$('#submitButton').addClass('error')
+						setTimeout(function() {
+							$('#submitButton').removeClass('error')
+						},1000)
+					}
+				})
+			} else {
+				$('#submitButton').addClass('error')
+				setTimeout(function() {
+					$('#submitButton').removeClass('error')
+				},1000)
+			}
+			console.log(eventScores)
+		});
+	</script>
+	{{/if}}
+</body>
+</html>

@@ -1,0 +1,62 @@
+<style>
+	a {
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		font-size: 20px;
+		padding: 10px 20px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding;
+		background-clip: padding-box;
+		display: inline-block;
+		-webkit-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+		-moz-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+		box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+		-moz-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-webkit-transform: scale(1, 1);
+		transform: scale(1, 1);
+		-moz-transition: all 0.15s ease;
+		-o-transition: all 0.15s ease;
+		-webkit-transition: all 0.15s ease;
+		transition: all 0.15s ease;
+		background-color: #53CB8B;
+		color: #F7F7FA;
+		margin: 10px 0px;
+	}
+	a:hover {
+		-webkit-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+		-moz-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+		box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+		-moz-transform: scale(1.02, 1.02);
+		-o-transform: scale(1.02, 1.02);
+		-ms-transform: scale(1.02, 1.02);
+		-webkit-transform: scale(1.02, 1.02);
+		transform: scale(1.02, 1.02);
+		background-color: #67d198;
+	}
+	a:focus {
+		-webkit-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+		-moz-box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+		box-shadow: 0 15px 35px rgba(50, 50, 98, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+		-moz-transform: scale(1.02, 1.02);
+		-o-transform: scale(1.02, 1.02);
+		-ms-transform: scale(1.02, 1.02);
+		-webkit-transform: scale(1.02, 1.02);
+		transform: scale(1.02, 1.02); 
+	}
+</style>
+<a id='remind'>Remind Judges</a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$('#remind').click(function(e) {
+		$.post('/remindJudges', {}, function(resp) {
+			console.log(resp)
+		})
+	});
+</script>
