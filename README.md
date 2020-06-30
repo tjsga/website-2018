@@ -9,7 +9,9 @@ Run the run.sh file and visit localhost:8080
 ## How to edit this site ##
 
 Step 1: Go To https://sga.tjhsst.edu/edit
+
 Step 2: Make relevant changes to the website.
+
 Step 3: Use the appropriate edting password and save your edits.
 
 ## How to edit this site as a developer ##
