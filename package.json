@@ -18,7 +18,7 @@
     "homepage": "https://github.com/tjsga/sga-website#readme",
     "dependencies": {
         "async": "^2.6.1",
-        "express": "^4.16.3",
+        "express": "^4.18.2",
         "gmail-send": "^1.2.14",
         "hbs": "^4.0.1",
         "path": "^0.12.7"
